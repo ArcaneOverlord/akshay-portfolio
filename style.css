@@ -17,40 +17,44 @@ canvas {
   z-index: -1;
   pointer-events: none;
 }
-
 .menubar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9vh;
   background-color: green;
-  max-width: 100vw;
-  max-height: 9vh;
- 
-  
-  position: relative;
-  z-index: 2;
+  z-index: 9000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 
 .text1 {
-  font-size:3vh;
-  margin-left:6vh;
-  margin-top: 3vh;
-  position:relative;
+  font-size: 3vh;
+  margin-left: 6vh;
+  position: relative;
   z-index: 1;
- 
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
-
 
 
 
 .container {
+  position: fixed;         /* Ensure it's out of document flow */
+  top: 2vh;                /* Adjust as per your design */
+  right: 2vh;
+  z-index: 9999;           /* Highest to stay above all */
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  z-index: 11;
-  padding: 2vh;
 }
+
+
 
 .bar1, .bar2, .bar3 {
   width: 25px;
@@ -70,28 +74,42 @@ canvas {
 }
 .change .bar3 {
   transform: translateY(-7px) rotate(45deg);
-}
-
-.menu {
-  display: none;
-  flex-direction: column;
+}.menu {
   position: fixed;
   top: 0;
   right: 0;
   width: 35vw;
-  background-color: red;
   min-height: 100vh;
-  z-index: 10;
+  background-color: red;
+  z-index: 9001;            /* LOWER than hamburger */
   padding: 2rem;
+  display: none;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
 }
 
 .menu.active {
   display: flex;
+  transform: translateX(0);
 }
+
 
 @media (max-width: 768px) {
   .menu {
     width: 70vw;
   }
 }
+
+.menu h6 {
+  font-size: 2.2vh;
+  margin: 2vh 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu h6:hover {
+  color: #ffd700; /* golden hover */
+}
+
 

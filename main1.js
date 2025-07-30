@@ -12,8 +12,12 @@
   // Close menu when clicking outside
   document.addEventListener("click", function (e) {
     if (!menuPanel.contains(e.target) && !menuButton.contains(e.target)) {
-      menuPanel.classList.remove("active");
-      menuButton.classList.remove("change");
+      menuPanel.classList.remove("change");
+      menuButton.classList.remove("active");
     }
   });
+
+  menuPanel.classList.toggle("active");
+document.body.style.overflow = menuPanel.classList.contains("active") ? "hidden" : "auto";
+
 
