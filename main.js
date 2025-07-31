@@ -1,23 +1,22 @@
- 
-  const menuButton = document.getElementById("menu");
-  const menuPanel = document.getElementById("menuPanel");
 
-  // Toggle open/close
-  menuButton.addEventListener("click", function (e) {
-    e.stopPropagation(); // prevent triggering document click
-    menuButton.classList.toggle("change");
-    menuPanel.classList.toggle("active");
-  });
+    const menuButton = document.getElementById("menu");
+    const menuPanel = document.getElementById("menuPanel");
 
-  // Close menu when clicking outside
-  document.addEventListener("click", function (e) {
-    if (!menuPanel.contains(e.target) && !menuButton.contains(e.target)) {
-      menuPanel.classList.remove("change");
-      menuButton.classList.remove("active");
-    }
-  });
+    menuButton.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menuButton.classList.toggle("change");
+      menuPanel.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
 
-  menuPanel.classList.toggle("active");
-document.body.style.overflow = menuPanel.classList.contains("active") ? "hidden" : "auto";
+    document.addEventListener("click", function (e) {
+      if (!menuPanel.contains(e.target) && !menuButton.contains(e.target)) {
+        menuPanel.classList.remove("active");
+        menuButton.classList.remove("change");
+        document.body.classList.remove("menu-open");
+      }
+    });
 
-
+    document.getElementById("resumeButton").addEventListener("click", function () {
+      window.open("path/to/your/resume.pdf", "_blank");
+    });
