@@ -114,7 +114,7 @@
       transition: transform 0.3s ease, color 0.3s ease;
     }
     
-/* #36454F*/
+
     .about {
       font-size: 2.5vh;
       margin-top: 25vh;
@@ -185,31 +185,61 @@
   transform: scale(1.2); /* Scale up on hover */
   transform-origin: center; /* Scale from center */
    text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
-  -webkit-text-stroke: 0.5px black;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+      -webkit-text-stroke: 0.5px #000;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+
 
 .introBody {
   display: flex;
   flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  text-align: left; /* Center text */
   align-items: center;
   justify-content: center;
   height: 100vh; /* Full viewport height */
   text-align: center; /* Center text */
   background-color: red;
   position: relative;
+
 }
 
+
+    @media (max-width: 768px) {
+      .introBody {
+        display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text */
+  margin:auto;
+   }
+    }
+
+
+
+.profileWrapper {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: -25vh;
+  margin-left: -60vw;
+  border: #fff 2px solid; /* White border */
+}
+
+
+
 .profilePicture {
-  width: 10vw; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Make it circular */
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area without stretching */
 }
   
   
