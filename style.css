@@ -2,11 +2,19 @@
     body {
       margin: 0;
       padding: 0;
-      background: #000;
+      background: black;
       color: #fff;
       font-family: sans-serif;
       overflow-x: hidden;
-    }
+      overscroll-behavior: none;
+      touch-action: manipulation;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+    
 
     .menubar {
       position: fixed;
@@ -113,18 +121,17 @@
 
     .menu h6:hover {
       color: #ffd700;
-      font-weight: bold;
+      font-weight:bold ;
       transform: scale(1.2);
       text-shadow:
         -0.5px -0.5px 0 #000,
         0.5px -0.5px 0 #000,
         -0.5px 0.5px 0 #000,
         0.5px 0.5px 0 #000;
-      -webkit-text-stroke: 0.5px #000;
-      transition: transform 0.3s ease, color 0.3s ease;
+       transition: transform 0.3s ease, color 0.3s ease;
     }
     
-
+   
     .about {
       font-size: 2.5vh;
       margin-top: 25vh;
@@ -204,12 +211,12 @@
   transform: scale(1.2); /* Scale up on hover */
   transform-origin: center; /* Scale from center */
    text-shadow:
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000,
-        0.5px 0.5px 0 #000;
-      -webkit-text-stroke: 0.5px #000;
-      transition: transform 0.3s ease, color 0.3s ease;
+        -0.8px -0.8px 0 #000,
+            0.8px -0.8px 0 #000,
+            -0.8px 0.8px 0 #000,
+            0.8px 0.8px 0 #000;
+          -webkit-text-stroke: 0.8px #000;    
+           transition: transform 0.3s ease, color 0.3s ease;
     }
     
 
@@ -221,9 +228,8 @@
   text-align: center; /* Center text */
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
-  text-align: center; /* Center text */
-  background-color: black;
+  
+  background-color: transparent; /* Transparent background */
   position: relative;
  
 }
@@ -247,19 +253,79 @@
   object-fit: cover; /* Cover the area without stretching */
 }
 
-.introtext2, .introtext3, .introtext4, .introText5 {
-  font-size: 2.5vh;
-  color: #fff;
-  margin-left: 1vh;
-  margin-right: 1vh;
+.introtextcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
-@media (max-width: 500px) {
-  .introtext2, .introtext3, .introtext4, .introText5 {
-    margin-left: 3vw;
-  margin-right: 10vw;
+.introtext2, .introtext3, .introtext4, .introtext5, .introtext6 {
+  font-size: 2.5vw;
+  color: #fff;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-decoration: none;
+   display: inline-block; /* Enable transform on text */
 }
+
+@media(max-width: 768px) {
+  .introtext2, .introtext3, .introtext4, .introtext5, .introtext6 {
+    
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
+
+
+.introtext6 {
+  color: white;
+   font-size: 2.5vw; /* Responsive font size */
+   text-decoration: none;  /* Removes default underline */
+  cursor: pointer;        /* Changes mouse cursor */
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block; /* Enable transform on text */
+}
+
+
+.introtext6 .emoji {
+  color: gold;
+  transition: color 0.3s ease;
+}
+
+.introtext6:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.introtext6:hover .emoji {
+  color: white;
+}
+
+
+
+
+
+.location-time {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+#clock {
+  font-weight: bold;
+  color: #ccc;
+}
+
+
+
+
 
 
   
