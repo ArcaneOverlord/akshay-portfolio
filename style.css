@@ -11,18 +11,18 @@
 
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
+ 
 }
 
     
 
     .menubar {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 9vh;
-      background-color: green;
+      background-color: gren;
       z-index: 9000;
       display: flex;
       justify-content: space-between;
@@ -33,7 +33,7 @@
     .text1 {
       font-size: 3vh;
       z-index: 9100;
-      position: relative;
+      position: absolute;
       margin-left: 2vw;
     }
 
@@ -41,7 +41,7 @@
     .text1 {
       font-size: 3vh;
       z-index: 9100;
-      position: relative;
+      position: absolute;
       margin-left: -0vw;
      
     }
@@ -157,6 +157,7 @@
       transform: scale(1.05);
       color: #000;
       box-shadow: #000 0px 0px 10px;
+      border: #000 2px solid;
     }
 
 
@@ -228,81 +229,92 @@
   text-align: center; /* Center text */
   align-items: center;
   justify-content: center;
-  
+
   background-color: transparent; /* Transparent background */
-  position: relative;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  
  
 }
-
 
 
 .profileWrapper {
   width: 150px;
   height: 150px;
-  overflow: hidden;
   border-radius: 50%;
-  border: #fff 2px solid; /* White border */
+  border: 2px solid white;
+  overflow: hidden;
+  margin-top: 10vh;
+  margin-bottom: 1vh;
+  flex-shrink: 0;
+  position: relative; /* Position relative for absolute children */
 }
-
-
+@media (max-width: 768px) {
+  .profileWrapper {
+    width: 130px; /* Smaller size for mobile */
+    height: 130px;
+    margin-top: 6vh;
+  }
+}
 
 
 .profilePicture {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the area without stretching */
+  object-fit: cover;
+  display: block;
 }
 
-.introtextcontainer {
+
+.introTextContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+
   margin-left: 5vw;
   margin-right: 5vw;
+ 
+  
 }
 
-.introtext2, .introtext3, .introtext4, .introtext5, .introtext6 {
-  font-size: 2.5vw;
+.introText1 {
+  font-size: 2rem; /* Responsive font size */
+  color: #fff;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  text-decoration: none; /* Removes default underline */
+  cursor: pointer; /* Changes mouse cursor */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.introText2, .introText3, .introText4, .introText5, .introText6 {
+  font-size: 1rem; /* Responsive font size */
   color: #fff;
   margin-left: 1vw;
   margin-right: 1vw;
   text-decoration: none;
-   display: inline-block; /* Enable transform on text */
+  margin-bottom: 1px;
+  margin-left: 1px;
+
 }
-
-@media(max-width: 768px) {
-  .introtext2, .introtext3, .introtext4, .introtext5, .introtext6 {
-    
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
+@media (max-width: 768px) {
+ .introText4{
+  display: none; /* Hide on smaller screens */
+ }
 }
+.introText6 {
 
-
-.introtext6 {
-  color: white;
-   font-size: 2.5vw; /* Responsive font size */
-   text-decoration: none;  /* Removes default underline */
+   text-decoration: underline;  /* Removes default underline */
   cursor: pointer;        /* Changes mouse cursor */
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block; /* Enable transform on text */
 }
 
 
-.introtext6 .emoji {
-  color: gold;
-  transition: color 0.3s ease;
-}
-
-.introtext6:hover {
+.introText6:hover {
   color: gold;
   transform: scale(1.1);
-}
-
-.introtext6:hover .emoji {
-  color: white;
 }
 
 
@@ -323,7 +335,29 @@
   color: #ccc;
 }
 
+.projectbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text */
+  background-color: #f0f0f0; /* Light background for contrast */
+}
 
+
+
+
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text */
+  background-color: red; /* Light background for contrast */
+}
 
 
 
