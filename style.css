@@ -26,7 +26,7 @@
       font-size: 3vh;
       z-index: 9100;
       position: relative;
-      margin-left: 3vw;
+      margin-left: 5vw;
     }
 
     .container {
@@ -37,7 +37,7 @@
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      margin-right: 3vw;
+      margin-right: 5vw;
       margin-top: 1vh;
     }
 
@@ -156,9 +156,18 @@
     @media (max-width: 768px) {
       .menu {
         width: 70vw;
+        
       }
       .container {
         margin-top: 0.5em;
+        margin-right: 1vw;
+      }  
+    }
+    
+    
+    @media (max-width: 508px) {
+      .menu {
+        width: 85vw;
 
       }
     }
@@ -194,7 +203,7 @@
     }
     
 
-
+ 
 .introBody {
   display: flex;
   flex-direction: column;
@@ -210,29 +219,15 @@
 }
 
 
-    @media (max-width: 768px) {
-      .introBody {
-        display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
-  text-align: center; /* Center text */
-  margin:auto;
-   }
-    }
-
-
 
 .profileWrapper {
   width: 150px;
   height: 150px;
   overflow: hidden;
   border-radius: 50%;
-  margin-top: -25vh;
-  margin-left: -60vw;
   border: #fff 2px solid; /* White border */
 }
+
 
 
 
@@ -241,5 +236,8 @@
   height: 100%;
   object-fit: cover; /* Cover the area without stretching */
 }
+
+
+
   
   
