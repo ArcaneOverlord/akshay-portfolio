@@ -26,15 +26,16 @@
       font-size: 3vh;
       z-index: 9100;
       position: relative;
-      margin-left: 5vw;
+      margin-left: 2vw;
     }
 
-    @media(min-width: 768px){
+    @media(max-width: 768px){
     .text1 {
       font-size: 3vh;
       z-index: 9100;
       position: relative;
-      margin-left: 1vw;
+      margin-left: -0vw;
+     
     }
   }
 
@@ -46,7 +47,7 @@
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      margin-right: 5vw;
+      margin-right: 2.5vw;
       margin-top: 1vh;
     }
 
@@ -217,14 +218,14 @@
   display: flex;
   flex-direction: column;
   height: 100vh; /* Full viewport height */
-  text-align: left; /* Center text */
+  text-align: center; /* Center text */
   align-items: center;
   justify-content: center;
   height: 100vh; /* Full viewport height */
   text-align: center; /* Center text */
-  background-color: red;
+  background-color: black;
   position: relative;
-
+ 
 }
 
 
@@ -246,6 +247,19 @@
   object-fit: cover; /* Cover the area without stretching */
 }
 
+.introtext2, .introtext3, .introtext4, .introText5 {
+  font-size: 2.5vh;
+  color: #fff;
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+@media (max-width: 500px) {
+  .introtext2, .introtext3, .introtext4, .introText5 {
+    margin-left: 3vw;
+  margin-right: 10vw;
+}
+}
 
 
   
