@@ -29,6 +29,15 @@
       margin-left: 5vw;
     }
 
+    @media(min-width: 768px){
+    .text1 {
+      font-size: 3vh;
+      z-index: 9100;
+      position: relative;
+      margin-left: 1vw;
+    }
+  }
+
     .container {
       position: fixed;
       top: 2vh;
