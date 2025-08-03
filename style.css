@@ -235,11 +235,11 @@
 .introBody {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Full viewport height */
   text-align: center; /* Center text */
   align-items: center;
   justify-content: center;
-  
+  overflow: hidden;
   background-color: transparent; /* Transparent background */
   margin-left: 1vw;
   margin-right: 1vw;
@@ -305,7 +305,7 @@
   margin-right: 1vw;
   text-decoration: none;
   margin-bottom: 1px;
-  margin-left: 1px;
+
 
 }
 @media (max-width: 768px) {
@@ -350,9 +350,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden;
   text-align: center; /* Center text */
-  background-color: #f0f0f0; /* Light background for contrast */
+  background-color: green; /* Light background for contrast */
 }
 
 
@@ -364,9 +366,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden;
   text-align: center; /* Center text */
   background-color: red; /* Light background for contrast */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 30vh; /* Full viewport height */
+  overflow: hidden;
+  text-align: center; /* Center text */
+  background-color: blue; /* Light background for contrast */
+}
+
+.introBody, .projectbody, .experience, .contact {
+  overflow: hidden; /* Prevents margin collapse */
+  padding-bottom: 2vh; /* Instead of bottom margin */
+}
+.introBody, .projectbody, .experience, .contact {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 
