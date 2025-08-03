@@ -6,13 +6,16 @@
       color: #fff;
       font-family: sans-serif;
       overflow-x: hidden;
+      max-width: 100%;
       overscroll-behavior: none;
       touch-action: manipulation;
 
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
- 
-}
+    }{
+  box-sizing: border-box;
+    }
+
 
     
 
