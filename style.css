@@ -22,7 +22,7 @@
     
 
     .menubar {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
@@ -32,14 +32,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2rem;
+     
     }
 
     .text1 {
       font-size: 3vh;
       z-index: 9100;
       position: absolute;
-      margin-left: 2vw;
+      margin-left: 5vw;
     }
 
     @media(max-width: 768px){
@@ -47,7 +47,7 @@
       font-size: 3vh;
       z-index: 9100;
       position: absolute;
-      margin-left: -0vw;
+      margin-left: 5vw;
      
     }
   }
@@ -172,7 +172,12 @@
     }
 
     
-
+    @media (max-width: 1024px) {
+      .menu {
+        width: 40vw;
+        
+      }
+    }
     
 
 
@@ -234,7 +239,7 @@
   text-align: center; /* Center text */
   align-items: center;
   justify-content: center;
-
+  
   background-color: transparent; /* Transparent background */
   margin-left: 1vw;
   margin-right: 1vw;
@@ -249,7 +254,7 @@
   border-radius: 50%;
   border: 2px solid white;
   overflow: hidden;
-  margin-top: 10vh;
+  margin-top: -20vh;
   margin-bottom: 1vh;
   flex-shrink: 0;
   position: relative; /* Position relative for absolute children */
@@ -258,7 +263,7 @@
   .profileWrapper {
     width: 130px; /* Smaller size for mobile */
     height: 130px;
-    margin-top: 6vh;
+    margin-top: -18vh;
   }
 }
 

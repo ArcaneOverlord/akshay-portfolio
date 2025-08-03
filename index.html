@@ -109,6 +109,20 @@ alt="ArcaneOverlord" class="profilePicture">
 
   <p>Experience details go here.</p>
 </div>
+
+
+
+<script>
+  window.addEventListener("load", () => {
+    const docWidth = document.documentElement.offsetWidth;
+    [...document.body.children].forEach(el => {
+      if (el.offsetWidth > docWidth) {
+        console.warn("Overflowing element:", el);
+      }
+    });
+  });
+</script>
+
   <script src="main.js"></script>
  
 </body>
