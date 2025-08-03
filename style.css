@@ -9,11 +9,13 @@
       max-width: 100%;
       overscroll-behavior: none;
       touch-action: manipulation;
+      position: relative;
+      box-sizing: border-box;
 
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
-    }{
-  box-sizing: border-box;
+    
+  
     }
 
 
