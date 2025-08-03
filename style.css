@@ -1,401 +1,222 @@
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: #fff;
-      font-family: sans-serif;
-      overflow-x: hidden;
-      max-width: 100%;
-      overscroll-behavior: none;
-      touch-action: manipulation;
-      position: relative;
-      box-sizing: border-box;
-
-  -webkit-user-drag: none;
-  -webkit-tap-highlight-color: transparent;
-    
-  
-    }
-
-
-    
-
-    .menubar {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 9vh;
-      background-color: gren;
-      z-index: 9000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-     
-    }
-
-    .text1 {
-      font-size: 3vh;
-      z-index: 9100;
-      position: absolute;
-      margin-left: 5vw;
-    }
-
-    @media(max-width: 768px){
-    .text1 {
-      font-size: 3vh;
-      z-index: 9100;
-      position: absolute;
-      margin-left: 5vw;
-     
-    }
-  }
-
-    .container {
-      position: fixed;
-      top: 2vh;
-      right: 2vh;
-      z-index: 10000; /* Hamburger always on top */
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      margin-right: 2.5vw;
-      margin-top: 1vh;
-    }
-
-    .bar1, .bar2, .bar3 {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 1.5px 0;
-      transition: 0.4s;
-      border-radius: 50px;
-      
-    }
-
-    .change .bar1 {
-      transform: translateY(6px) rotate(-45deg);
-      background-color: black;
-    }
-
-    .change .bar2 {
-      opacity: 0;
-    }
-
-    .change .bar3 {
-      transform: translateY(-6px) rotate(45deg);
-      background-color: black;
-    }
-
-    .menu {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 30vw;
-      height: 100vh;
-      background-color:whitesmoke;
-      z-index: 9500;
-      padding: 3rem 2rem;
-      display: flex;
-      flex-direction: column;
-      transform: translateX(100%);
-      transition: transform 0.4s ease, opacity 0.3s ease;
-      opacity: 0;
-      pointer-events: none;
-      align-items: center;
-     
-    }
-
-    .menu.active {
-      transform: translateX(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .menu h6 {
-      font-size: 3vh;
-      color: #000;
-      font-weight: 5000;
-      cursor: pointer;
-      transition: color 0.2s ease;
-      text-decoration: none;
-    
-      
-    }
-
-    .menu h6:hover {
-      color: #ffd700;
-      font-weight:bold ;
-      transform: scale(1.2);
-      text-shadow:
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000,
-        0.5px 0.5px 0 #000;
-       transition: transform 0.3s ease, color 0.3s ease;
-    }
-    
-   
-    .about {
-      font-size: 2.5vh;
-      margin-top: 25vh;
-      margin-bottom: 2.5vh;
-    }
-    .resume {
-      font-size: 2.5vh;
-      margin-top: 10vh;
-      margin-bottom: 5vh;
-      background-color: #000;
-      color: #fff;
-      border: gold 2px solid;
-      padding: 0.5em 1em;
-      cursor: pointer;
-      border-radius: 50px;
-      margin-bottom: 10vh;
-
-    }
-
-    .resume:hover {
-      transition: background-color 0.5s ease, transform 0.4s ease, color 0.2s ease;
-      background-color: gold;
-      transform: scale(1.05);
-      color: #000;
-      box-shadow: #000 0px 0px 10px;
-      border: #000 2px solid;
-    }
-
-
-    .menuRest{
-      margin-top: 2.5vh;
-      margin-bottom: 2.5vh;
-    }
-
-    
-    @media (max-width: 1024px) {
-      .menu {
-        width: 40vw;
-        
-      }
-    }
-    
-
-
-    @media (max-width: 768px) {
-      .menu {
-        width: 70vw;
-        
-      }
-      .container {
-        margin-top: 0.5em;
-        margin-right: 1vw;
-      }  
-    }
-    
-    
-    @media (max-width: 508px) {
-      .menu {
-        width: 85vw;
-
-      }
-    }
-
-    body.menu-open {
-      overflow: hidden;
-    }
-
-    
-
-.social-icons a {
-  color: black; /* Default color */
-  font-size: 4vh;
-  margin-right: 1vw;
-  margin-left: 2vw;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
-  text-decoration: none;
-  display: inline-block; /* Enable transform on anchor */
-  
-}
-.social-icons a:hover {
-  color: #ffd700; /* Change color on hover */
-  transform: scale(1.2); /* Scale up on hover */
-  transform-origin: center; /* Scale from center */
-   text-shadow:
-        -0.8px -0.8px 0 #000,
-            0.8px -0.8px 0 #000,
-            -0.8px 0.8px 0 #000,
-            0.8px 0.8px 0 #000;
-          -webkit-text-stroke: 0.8px #000;    
-           transition: transform 0.3s ease, color 0.3s ease;
-    }
-    
-
- 
-.introBody {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
-  text-align: center; /* Center text */
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: transparent; /* Transparent background */
-  margin-left: 1vw;
-  margin-right: 1vw;
-  
- 
-}
-
-
-.profileWrapper {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid white;
-  overflow: hidden;
-  margin-top: -20vh;
-  margin-bottom: 1vh;
-  flex-shrink: 0;
-  position: relative; /* Position relative for absolute children */
-}
-@media (max-width: 768px) {
-  .profileWrapper {
-    width: 130px; /* Smaller size for mobile */
-    height: 130px;
-    margin-top: -18vh;
-  }
-}
-
-
-.profilePicture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-.introTextContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  margin-left: 5vw;
-  margin-right: 5vw;
- 
-  
-}
-
-.introText1 {
-  font-size: 2rem; /* Responsive font size */
-  color: #fff;
-  margin-top: 3vh;
-  margin-bottom: 1vh;
-  text-decoration: none; /* Removes default underline */
-  cursor: pointer; /* Changes mouse cursor */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.introText2, .introText3, .introText4, .introText5, .introText6 {
-  font-size: 1rem; /* Responsive font size */
-  color: #fff;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  text-decoration: none;
-  margin-bottom: 1px;
-
-
-}
-@media (max-width: 768px) {
- .introText4{
-  display: none; /* Hide on smaller screens */
- }
-}
-.introText6 {
-
-   text-decoration: underline;  /* Removes default underline */
-  cursor: pointer;        /* Changes mouse cursor */
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block; /* Enable transform on text */
-}
-
-
-.introText6:hover {
-  color: gold;
-  transform: scale(1.1);
-}
-
-
-
-
-
-.location-time {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-}
-#clock {
-  font-weight: bold;
-  color: #ccc;
-}
-
-.projectbody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Full viewport height */
-  width: 100%;
-  overflow: hidden;
-  text-align: center; /* Center text */
-  background-color: green; /* Light background for contrast */
-}
-
-
-
-
-
-.experience {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Full viewport height */
-  width: 100%;
-  overflow: hidden;
-  text-align: center; /* Center text */
-  background-color: red; /* Light background for contrast */
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 30vh; /* Full viewport height */
-  overflow: hidden;
-  text-align: center; /* Center text */
-  background-color: blue; /* Light background for contrast */
-}
-
-.introBody, .projectbody, .experience, .contact {
-  overflow: hidden; /* Prevents margin collapse */
-  padding-bottom: 2vh; /* Instead of bottom margin */
-}
-.introBody, .projectbody, .experience, .contact {
+/* ───── General Reset ───── */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #0e0e0e;
+  color: #fff;
+}
 
+/* ───── Menubar ───── */
+.menubar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #121212;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.text1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0c040;
+}
 
-  
-  
+/* ───── Hamburger Button ───── */
+.container {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* ───── Side Menu Panel ───── */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #181818;
+  padding: 2rem;
+  z-index: 1050;
+  display: none; /* toggle via JS */
+}
+
+.menu h6 {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.resume {
+  margin: 1rem 0;
+  background: #f0c040;
+  color: #000;
+  padding: 0.6rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ───── Social Icons ───── */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: #f0c040;
+  font-size: 1.2rem;
+}
+
+/* ───── Section Containers ───── */
+.introBody,
+.projectbody,
+.experience,
+.contact {
+  min-height: 100vh;
+  width: 100%;
+  padding: 5vh 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1a1a1a;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ───── Profile Picture ───── */
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profilePicture {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0c040;
+}
+
+/* ───── Intro Text ───── */
+.introTextContainer {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introText1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.introText2,
+.introText3,
+.introText4,
+.introText5,
+.introText6 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+
+.location-time {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* ───── Project Section ───── */
+.projectMenu {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectMenu h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projectMenu button {
+  background: transparent;
+  border: 2px solid #f0c040;
+  color: #f0c040;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.projectCard {
+  background: #252525;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(240, 192, 64, 0.1);
+}
+
+.projectImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.projectLink {
+  color: #f0c040;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ───── Footer ───── */
+.footer {
+  background: #0e0e0e;
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  font-size: 0.9rem;
+}
