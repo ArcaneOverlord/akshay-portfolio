@@ -66,7 +66,19 @@ const projectData = {
     {
       title: "Portfolio Website",
       description: "A responsive portfolio using HTML, CSS, and JS.",
-      image: "assets/images/portfolio.jpg",
+      image: "assets/images/overlord mascot.png",
+      link: "#"
+    },
+     {
+      title: "Portfolio Website",
+      description: "A responsive portfolio using HTML, CSS, and JS.",
+      image: "assets/images/overlord mascot.png",
+      link: "#"
+    },
+     {
+      title: "Portfolio Website",
+      description: "A responsive portfolio using HTML, CSS, and JS.",
+      image: "assets/images/overlord mascot.png",
       link: "#"
     },
     // more personal projects...
@@ -75,7 +87,7 @@ const projectData = {
     {
       title: "E-commerce Site",
       description: "Built for a local clothing brand.",
-      image: "assets/images/client-project.jpg",
+      image: "assets/images/overlord mascot.png",
       link: "#"
     },
     // more client projects...
@@ -84,7 +96,7 @@ const projectData = {
     {
       title: "Hackathon App",
       description: "Team project during a hackathon.",
-      image: "assets/images/collab-app.jpg",
+      image: "assets/images/overlord mascot.png",
       link: "#"
     },
     // more collab projects...
@@ -101,17 +113,51 @@ function renderProjects(type) {
   setTimeout(() => {
     container.innerHTML = ""; // Clear old content
 
-    projectData[type].forEach((proj) => {
-      const card = document.createElement("div");
-      card.className = "projectCard";
-      card.innerHTML = `
-        <img src="${proj.image}" alt="${proj.title}" class="projectImage">
-        <h3 class="projectTitle">${proj.title}</h3>
-        <p class="projectDescription">${proj.description}</p>
-        <a href="${proj.link}" class="projectLink" target="_blank">View Project</a>
-      `;
-      container.appendChild(card);
-    });
+   projectData[type].forEach((proj) => {
+  const card = document.createElement("div");
+  card.className = "projectCard";
+
+  // Image wrapper
+  const imgWrapper = document.createElement("div");
+  imgWrapper.className = "imageWrapper";
+
+  const img = document.createElement("img");
+  img.src = proj.image;
+  img.alt = proj.title;
+  img.className = "projectImage";
+
+  imgWrapper.appendChild(img);
+
+  // Text wrapper
+  const textWrapper = document.createElement("div");
+  textWrapper.className = "textWrapper";
+
+  const title = document.createElement("h3");
+  title.className = "projectTitle";
+  title.textContent = proj.title;
+
+  const desc = document.createElement("p");
+  desc.className = "projectDescription";
+  desc.textContent = proj.description;
+
+  const link = document.createElement("a");
+  link.className = "projectLink";
+  link.href = proj.link;
+  link.target = "_blank";
+  link.textContent = "View Project";
+
+  // Add text elements to text wrapper
+  textWrapper.appendChild(title);
+  textWrapper.appendChild(desc);
+  textWrapper.appendChild(link);
+
+  // Combine into card
+  card.appendChild(imgWrapper);
+  card.appendChild(textWrapper);
+
+  container.appendChild(card);
+});
+
 
     // Fade-in animation
     wrapper.classList.remove("fade-out");
@@ -123,7 +169,8 @@ function renderProjects(type) {
   }, 300);
 }
 
-document.querySelectorAll(".projectBtn").forEach((btn) => {
+document.querySelectorAll(".personal, .client, .collab")
+.forEach((btn) => {
   btn.addEventListener("click", () => {
     const type = btn.getAttribute("data-type");
     renderProjects(type);
