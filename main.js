@@ -105,69 +105,61 @@ const projectData = {
 
 const container = document.getElementById("projectList");
 const wrapper = document.getElementById("projectContainer");
-
 function renderProjects(type) {
-  // Add fade-out animation
   wrapper.classList.add("fade-out");
 
   setTimeout(() => {
-    container.innerHTML = ""; // Clear old content
+    container.innerHTML = "";
 
-   projectData[type].forEach((proj) => {
-  const card = document.createElement("div");
-  card.className = "projectCard";
+    projectData[type].forEach((proj) => {
+      const card = document.createElement("div");
+      card.className = "projectCard";
 
-  // Image wrapper
-  const imgWrapper = document.createElement("div");
-  imgWrapper.className = "imageWrapper";
+      // Wrap image in a consistent structure
+      const imgWrapper = document.createElement("div");
+      imgWrapper.className = "imageWrapper";
 
-  const img = document.createElement("img");
-  img.src = proj.image;
-  img.alt = proj.title;
-  img.className = "projectImage";
+      const img = document.createElement("img");
+      img.src = proj.image;
+      img.alt = proj.title;
+      img.className = "projectImage";
+      imgWrapper.appendChild(img);
 
-  imgWrapper.appendChild(img);
+      const contentWrapper = document.createElement("div");
+      contentWrapper.className = "projectText"; // Wrap all text inside this div
 
-  // Text wrapper
-  const textWrapper = document.createElement("div");
-  textWrapper.className = "textWrapper";
+      const title = document.createElement("h3");
+      title.className = "projectTitle";
+      title.textContent = proj.title;
 
-  const title = document.createElement("h3");
-  title.className = "projectTitle";
-  title.textContent = proj.title;
+      const desc = document.createElement("p");
+      desc.className = "projectDescription";
+      desc.textContent = proj.description;
 
-  const desc = document.createElement("p");
-  desc.className = "projectDescription";
-  desc.textContent = proj.description;
+      const link = document.createElement("a");
+      link.className = "projectLink";
+      link.href = proj.link;
+      link.textContent = "View Project";
+      link.target = "_blank";
 
-  const link = document.createElement("a");
-  link.className = "projectLink";
-  link.href = proj.link;
-  link.target = "_blank";
-  link.textContent = "View Project";
+      contentWrapper.appendChild(title);
+      contentWrapper.appendChild(desc);
+      contentWrapper.appendChild(link);
 
-  // Add text elements to text wrapper
-  textWrapper.appendChild(title);
-  textWrapper.appendChild(desc);
-  textWrapper.appendChild(link);
+      // Final structure
+      card.appendChild(imgWrapper);
+      card.appendChild(contentWrapper);
+      container.appendChild(card);
+    });
 
-  // Combine into card
-  card.appendChild(imgWrapper);
-  card.appendChild(textWrapper);
-
-  container.appendChild(card);
-});
-
-
-    // Fade-in animation
     wrapper.classList.remove("fade-out");
     wrapper.classList.add("fade-in");
-
     setTimeout(() => {
       wrapper.classList.remove("fade-in");
     }, 500);
   }, 300);
 }
+
 
 document.querySelectorAll(".personal, .client, .collab")
 .forEach((btn) => {

@@ -421,7 +421,18 @@ padding:5px; /* Padding for spacing */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 1rem; /* Padding for spacing */
   background-color: transparent; /* Light background for contrast */
+  
 }
+#projectContainer {
+  overflow: auto; /* or scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+#projectContainer::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
 
 
 .project-list {
