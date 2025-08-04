@@ -90,10 +90,34 @@ const projectData = {
       image: "assets/images/overlord mascot.png",
       link: "#"
     },
+     {
+      title: "E-commerce Site",
+      description: "Built for a local clothing brand.",
+      image: "assets/images/overlord mascot.png",
+      link: "#"
+    },
+     {
+      title: "E-commerce Site",
+      description: "Built for a local clothing brand.",
+      image: "assets/images/overlord mascot.png",
+      link: "#"
+    },
     // more client projects...
   ],
   collab: [
     {
+      title: "Hackathon App",
+      description: "Team project during a hackathon.",
+      image: "assets/images/overlord mascot.png",
+      link: "#"
+    },
+     {
+      title: "Hackathon App",
+      description: "Team project during a hackathon.",
+      image: "assets/images/overlord mascot.png",
+      link: "#"
+    },
+     {
       title: "Hackathon App",
       description: "Team project during a hackathon.",
       image: "assets/images/overlord mascot.png",
