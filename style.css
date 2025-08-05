@@ -363,20 +363,28 @@ padding-top: 2vh; /* Padding for spacing */
   max-height: rem;
   background-color: #1a1a1a; /* Light background for contrast */
   border-radius: 5px;
-
+  padding: 1rem; /* Padding for spacing */
+  
 }
 
-.projrctText {
-  font-size: 2rem; /* Responsive font size */
-  color: #ffd700;
-  margin-top: 1vh;
-  margin-bottom:-1vh;
+.projectText{
+  font-size: 1.5rem;   /* Responsive font size */
+  color: white;
+ text-align: center;
+ justify-self: center;
+
   text-decoration: none; /* Removes default underline */
-  cursor: pointer; /* Changes mouse cursor */
-  transition: transform 0.3s ease, color 0.3s ease;
+  
 }
 
-
+.projectToggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw ; /* Space between buttons */
+ 
+}
 
 .sectionButton {
   border: 1px solid #444;
@@ -386,6 +394,13 @@ padding-top: 2vh; /* Padding for spacing */
   cursor: pointer;
   transition: all 0.3s ease;
   gap: 2vw; /* Space between buttons */
+  border-radius: 30px;
+}
+@media (min-width: 768px) {
+  .sectionButton {
+    width: 7rem/* Adjust width for smaller screens */
+    
+  }
 }
 
 .sectionButton.active {
@@ -395,37 +410,8 @@ padding-top: 2vh; /* Padding for spacing */
 }
 
 
-/*
-.projectMenuBtns {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-   gap:10vw; /* Space between buttons 
-  margin-top: -1vh;
-  margin-bottom: 0.5vh;
-  
-}
 
-*/
-/*
-.personal, .client, .collab {
-  background-color: black; /* Transparent background 
-  color: #fff; /* White text 
-  border: white solid 2px; /* No border 
-  font-size: 1rem; /* Font size for buttons 
-  cursor: pointer; /* Pointer cursor on hover 
-  height: 1.8rem; /* Button height 
-  min-width:6rem; /* Button width 
-  max-width:8rem;
-  border-radius: 50px; /* Rounded corners 
-  transition: background-color 0.3s ease, color 0.3s ease;
-
- 
-}
-
- */
-
-.personal:hover, .client:hover, .collab:hover {
+.sectionButton:hover {
   border: #ffd700 solid 2px; /* Change border  on hover */
   color: #ffd700; /* Change text color on hover */
   transform: scale(1.05); /* Slightly enlarge on hover */
@@ -435,22 +421,11 @@ padding-top: 2vh; /* Padding for spacing */
 
 
 @media (max-width: 768px) {
-  .projectMenuBtns {
-    
-    gap: 2vw; /* Space between buttons */
-}
-.personal, .client, .collab {
-
-  font-size: 0.5rem; /* Font size for buttons */
-  height: 1.8rem; /* Button height */
-  width:fit-content; /* Button width */
-}
+  
 .projectShell{
 padding:5px; /* Padding for spacing */
 }
- 
 }
-
 .projectContainer {
   display: flex;
   flex-direction: column;
