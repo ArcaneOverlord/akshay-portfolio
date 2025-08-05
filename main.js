@@ -116,16 +116,13 @@ const projectData = {
   ]
 };
 const noProjectsHTML = `
-  <div class="projectCard no-projects-card">
-    <div class="projectImageContainer">
-      <img src="assets/images/rage.png" alt="No Projects" />
-    </div>
-    <div class="projectTextContainer">
-      <h3>No Projects Available</h3>
-      <p>This person has nothing to offer here... yet.</p>
-    </div>
+  <div class="no-projects-fallback">
+    <img src="assets/images/rage.png" alt="No Projects" />
+    <h3>No Projects Available</h3>
+    <p>This person has nothing to offer here... yet.</p>
   </div>
 `;
+
 
 function renderProjects(section) {
   const container = document.getElementById("projectList");
