@@ -609,6 +609,7 @@ padding:5px; /* Padding for spacing */
   height:100%;
   background-color: green;
   display: flex;
+  flex-direction: column;
   padding-left: 2vw;
   padding-top:15vh;
   padding-right: 2vw;
@@ -616,8 +617,17 @@ padding:5px; /* Padding for spacing */
 
 }
 
+.experienceTitle {
+  
+  background-color: #ccc;
+  flex: 1;
+  width: 100%;
+  height:20%
+
+}
 
 .experienceWrapper {
+  flex: 1;
  display:flex;
  flex-direction:row;
  width:100%;
@@ -630,17 +640,6 @@ padding:5px; /* Padding for spacing */
  
 }
 
-.experienceTitle {
-  font-size: 1rem;
-  justify-self: center;
-  background-color: #ccc;
-  display:flex;
-  height: 20vh;
-  width:100%;
-  margin-bottom:80vh;
-  z-index: 10;
-
-}
 
 .experience1{
   flex:1;
@@ -665,11 +664,38 @@ padding:5px; /* Padding for spacing */
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 30vh; /* Full viewport height */
+  height:100%; /* Full viewport height */
   overflow: hidden;
   text-align: center; /* Center text */
   background-color: yellow; /* Light background for contrast */
+   padding-left: 2vw;
+  padding-top: 2vh;
+  padding-right: 2vw;
+  padding-bottom:2vw;
+ 
+
 }
+
+
+.certificates{
+  display:flex;
+  flex:1;
+  background-color: red;
+  width:100%;
+  height:50vh;
+
+}
+
+.reach{
+  display:flex;
+  flex:1;
+  background-color:blue;
+  width:100%;
+  height:50vh;
+
+}
+
+
 
 .introBody, .projectbody, .experience, .contact {
   overflow: hidden; /* Prevents margin collapse */
