@@ -115,35 +115,46 @@ const projectData = {
     // more collab projects...
   ]
 };
+const noProjectsHTML = `
+  <div class="projectCard no-projects-card">
+    <div class="projectImageContainer">
+      <img src="assets/images/rage.png" alt="No Projects" />
+    </div>
+    <div class="projectTextContainer">
+      <h3>No Projects Available</h3>
+      <p>This person has nothing to offer here... yet.</p>
+    </div>
+  </div>
+`;
+
 function renderProjects(section) {
   const container = document.getElementById("projectList");
-  container.innerHTML = "";
+  container.innerHTML = ""; // clear old cards
 
-  const projects = projectData[section];
-  if (!projects || !projects.length) {
+  const projects = projectData[section] || [];
+
+  if (projects.length === 0) {
     container.innerHTML = noProjectsHTML;
     return;
   }
 
-  projects.forEach(proj => {
+  projects.forEach((proj) => {
     const card = document.createElement("div");
     card.className = "projectCard";
-
     card.innerHTML = `
       <div class="projectImageContainer">
-        <img src="${proj.image}" alt="${proj.title}">
+        <img src="${proj.image}" alt="${proj.title}" />
       </div>
       <div class="projectTextContainer">
         <h3>${proj.title}</h3>
         <p>${proj.description}</p>
-        <p class="techUsed">${proj.tech?.join(", ")}</p>
+        <p class="techUsed">${(proj.tech||[]).join(", ")}</p>
         <a href="${proj.link}" target="_blank">View Project</a>
       </div>
     `;
     container.appendChild(card);
   });
 }
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -157,9 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
       // Highlight active button
       sectionButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
+
+      // reset scroll
+      document.getElementById("projectContainer").scrollTop = 0;
     });
   });
 
-  // Load default (e.g. 'personal')
+  // Trigger initial load+highlight
   document.querySelector('.sectionButton[data-section="personal"]').click();
 });
