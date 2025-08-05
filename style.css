@@ -434,98 +434,80 @@ padding:5px; /* Padding for spacing */
 }
 
 
-
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2vw;
- margin-top: 4vh;
-}
-
-
-
-
 .projectCard {
+  display: flex;
+  flex-direction: row; /* side-by-side on desktop */
+  align-items: center;
+  justify-content: space-between;
+
   background-color: #111;
   border: 1px solid #ffd700;
   border-radius: 15px;
-  padding: 1vh 1vw 1vh 1vw;
-  width: 90%;
-  height: auto;
-  text-align: center;
+  padding: 1vh 1vw;
   color: white;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
   transition: transform 0.3s ease;
 
-  /* 🔥 Change this */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content:space-between;
-  
+  width: 100%;       /* Full width of container */
+  max-width: 1000px; /* Optional: prevent stretching too wide */
 }
 
-
+/* 🔁 Mobile: stack image and text vertically */
 @media (max-width: 768px) {
-.projectCard {
-  background-color: #111;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 1rem;
-  width: 90%;
-  height: auto;
-  text-align: center;
-  color: white;
-  
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-  transition: transform 0.3s ease;
-
-  /* 🔥 Change this */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
+  .projectCard {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
 
-.project-card:hover {
+
+
+
+
+.projectCard:hover {
   transform: scale(1.05);
 }
 
- 
+#projectList {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 2rem;
+  align-items: center; /* center the cards */
+}
+
+
 .imageWrapper {
-  width: 100%;
-  max-width:350px;
-  height:auto;
-  max-height: 300px;
+  width: 50%;
+  max-width: 350px;
   border-radius: 12px;
-  align-items: center;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  overflow: hidden;
-  
+  align-items: center;
 }
-  
 
-@media (max-width: 768px) {
-.imageWrapper {
-  width: 100%;
-  height: 60%;
-  border-radius: 12px;
-}}
 .imageWrapper img {
   width: 100%;
-  display:flex;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .textWrapper {
+  width: 50%;
   padding: 1em;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
+/* 🔁 Mobile override: image full width, text full width */
+@media (max-width: 768px) {
+  .imageWrapper, .textWrapper {
+    width: 100%;
+  }
+}
 
 
 
@@ -563,7 +545,14 @@ padding:5px; /* Padding for spacing */
 
 #projectContainer {
   transition: opacity 0.5s ease;
+ 
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
 
 .fade-out {
   opacity: 0;
