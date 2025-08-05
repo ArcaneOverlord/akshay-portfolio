@@ -67,18 +67,21 @@ const projectData = {
       title: "Portfolio Website",
       description: "A responsive portfolio using HTML, CSS, and JS.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
      {
       title: "Portfolio Website",
       description: "A responsive portfolio using HTML, CSS, and JS.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
      {
       title: "Portfolio Website",
       description: "A responsive portfolio using HTML, CSS, and JS.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
     // more personal projects...
@@ -88,18 +91,21 @@ const projectData = {
       title: "E-commerce Site",
       description: "Built for a local clothing brand.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
      {
       title: "E-commerce Site",
       description: "Built for a local clothing brand.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
      {
       title: "E-commerce Site",
       description: "Built for a local clothing brand.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
     // more client projects...
@@ -109,121 +115,68 @@ const projectData = {
       title: "Hackathon App",
       description: "Team project during a hackathon.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
      {
       title: "Hackathon App",
       description: "Team project during a hackathon.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
      {
       title: "Hackathon App",
       description: "Team project during a hackathon.",
       image: "assets/images/overlord mascot.png",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
     // more collab projects...
   ]
 };
 
-const container = document.getElementById("projectList");
-const wrapper = document.getElementById("projectContainer");
-function renderProjects(type) {
-  wrapper.classList.add("fade-out");
 
-  setTimeout(() => {
-    container.innerHTML = "";
+function renderProjects(section) {
+  const container = document.getElementById("projectList");
+  container.innerHTML = ""; // Clear previous
 
-    projectData[type].forEach((proj) => {
-      const card = document.createElement("div");
-      card.className = "projectCard";
+  projectData[section].forEach((project) => {
+    const card = document.createElement("div");
+    card.className = "projectCard";
 
-      // Wrap image in a consistent structure
-      const imgWrapper = document.createElement("div");
-      imgWrapper.className = "imageWrapper";
+    card.innerHTML = `
+      <div class="projectImage">
+        <img src="${project.image}" alt="${project.title}">
+      </div>
+      <div class="projectInfo">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        ${project.tech ? `<p class="techUsed">${project.tech.join(", ")}</p>` : ""}
+        <a href="${project.link}" target="_blank">View Project</a>
+      </div>
+    `;
 
-      const img = document.createElement("img");
-      img.src = proj.image;
-      img.alt = proj.title;
-      img.className = "projectImage";
-      imgWrapper.appendChild(img);
-
-      const contentWrapper = document.createElement("div");
-      contentWrapper.className = "projectText"; // Wrap all text inside this div
-
-      const title = document.createElement("h3");
-      title.className = "projectTitle";
-      title.textContent = proj.title;
-
-      const desc = document.createElement("p");
-      desc.className = "projectDescription";
-      desc.textContent = proj.description;
-
-      const link = document.createElement("a");
-      link.className = "projectLink";
-      link.href = proj.link;
-      link.textContent = "View Project";
-      link.target = "_blank";
-
-      contentWrapper.appendChild(title);
-      contentWrapper.appendChild(desc);
-      contentWrapper.appendChild(link);
-
-      // Final structure
-      card.appendChild(imgWrapper);
-      card.appendChild(contentWrapper);
-      container.appendChild(card);
-    });
-
-    wrapper.classList.remove("fade-out");
-    wrapper.classList.add("fade-in");
-    setTimeout(() => {
-      wrapper.classList.remove("fade-in");
-    }, 500);
-  }, 300);
+    container.appendChild(card);
+  });
 }
 
 
-document.querySelectorAll(".personal, .client, .collab")
-.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const type = btn.getAttribute("data-type");
-    renderProjects(type);
-  });
-});
 
-// Initial load
 document.addEventListener("DOMContentLoaded", () => {
-  renderProjects("personal");
-});
+  const sectionButtons = document.querySelectorAll(".sectionButton");
 
+  sectionButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const section = btn.dataset.section;
+      renderProjects(section);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const defaultSection = "personal";
-  const buttons = document.querySelectorAll(".sectionButton");
-  const projectContainer = document.getElementById("projectContainer");
-
-  // Load default content
-  showSection(defaultSection);
-
-  // Set default active button
-  buttons.forEach(button => {
-    if (button.id === defaultSection) {
-      button.classList.add("active");
-    }
-
-    button.addEventListener("click", function () {
-      buttons.forEach(btn => btn.classList.remove("active"));
-      this.classList.add("active");
-      showSection(this.id);
+      // Highlight active button
+      sectionButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
     });
   });
 
-  function showSection(section) {
-    // Your logic to filter or load project cards here
-    // You could show/hide cards or re-render
-    console.log("Show section:", section);
-  }
+  // Load default (e.g. 'personal')
+  document.querySelector('.sectionButton[data-section="personal"]').click();
 });
-

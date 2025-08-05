@@ -168,7 +168,7 @@
     
     @media (max-width: 508px) {
       .menu {
-        width: 85vw;
+        width: 100vw;
 
       }
     }
@@ -385,6 +385,7 @@ padding-top: 2vh; /* Padding for spacing */
   padding: 0.5em 1em;
   cursor: pointer;
   transition: all 0.3s ease;
+  gap: 2vw; /* Space between buttons */
 }
 
 .sectionButton.active {
@@ -496,7 +497,8 @@ padding:5px; /* Padding for spacing */
   .projectCard {
     flex-direction: column;
     align-items: center;
-    width: 90%
+    width: 100%; /* Full width on mobile */
+    max-height:70vh; /* Prevents overflow */
   }
 }
 
@@ -516,7 +518,7 @@ padding:5px; /* Padding for spacing */
 }
 
 
-.imageWrapper {
+.projectImage {
   width: 50%;
   max-width: 350px;
   border-radius: 12px;
@@ -526,14 +528,14 @@ padding:5px; /* Padding for spacing */
   align-items: center;
 }
 
-.imageWrapper img {
+.projectImage img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
 }
 
-.textWrapper {
+.projectInfo {
   width: 50%;
   padding: 1em;
   display: flex;
@@ -543,7 +545,7 @@ padding:5px; /* Padding for spacing */
 
 /* 🔁 Mobile override: image full width, text full width */
 @media (max-width: 768px) {
-  .imageWrapper, .textWrapper {
+  .projectImage, .projectInfo {
     width: 100%;
   }
 }
