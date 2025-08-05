@@ -1,3 +1,6 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
     body {
       margin: 0;
@@ -336,8 +339,9 @@ padding-top: 2vh; /* Padding for spacing */
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  margin: 0 auto; /* Center horizontally */
   width: 100%;
+  max-width: 1000px; /* Optional: prevent stretching too wide */
   height: 92vh; /* Full viewport height */
   overflow: hidden;
  
@@ -372,34 +376,53 @@ padding-top: 2vh; /* Padding for spacing */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+
+
+.sectionButton {
+  border: 1px solid #444;
+  background-color: transparent;
+  color: #ffd700;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sectionButton.active {
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  background-color: #111;
+}
+
+
+/*
 .projectMenuBtns {
   display: flex;
   flex-direction: row;
   justify-content: center;
-   gap:10vw; /* Space between buttons */
+   gap:10vw; /* Space between buttons 
   margin-top: -1vh;
   margin-bottom: 0.5vh;
   
 }
 
-
-
+*/
+/*
 .personal, .client, .collab {
-  background-color: black; /* Transparent background */
-  color: #fff; /* White text */
-  border: white solid 2px; /* No border */
-  font-size: 1rem; /* Font size for buttons */
-  cursor: pointer; /* Pointer cursor on hover */
-  height: 1.8rem; /* Button height */
-  min-width:6rem; /* Button width */
+  background-color: black; /* Transparent background 
+  color: #fff; /* White text 
+  border: white solid 2px; /* No border 
+  font-size: 1rem; /* Font size for buttons 
+  cursor: pointer; /* Pointer cursor on hover 
+  height: 1.8rem; /* Button height 
+  min-width:6rem; /* Button width 
   max-width:8rem;
-  border-radius: 50px; /* Rounded corners */
+  border-radius: 50px; /* Rounded corners 
   transition: background-color 0.3s ease, color 0.3s ease;
 
  
 }
 
-
+ */
 
 .personal:hover, .client:hover, .collab:hover {
   border: #ffd700 solid 2px; /* Change border  on hover */
@@ -528,36 +551,6 @@ padding:5px; /* Padding for spacing */
 
 
 
-
-
-.project-title {
-  margin-top: 1vh;
-  font-size: 1.3rem;
-  color: gold;
-}
-
-.project-description {
-  font-size: 1rem;
-  color: #ccc;
-  margin: 1vh 0;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 1vh;
-  color: black;
-  background-color: gold;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project-link:hover {
-  background-color: #fff;
-  color: black;
-  transform: scale(1.05);
-}
 
 #projectContainer {
   transition: opacity 0.5s ease;

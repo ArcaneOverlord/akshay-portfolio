@@ -197,3 +197,33 @@ document.querySelectorAll(".personal, .client, .collab")
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects("personal");
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const defaultSection = "personal";
+  const buttons = document.querySelectorAll(".sectionButton");
+  const projectContainer = document.getElementById("projectContainer");
+
+  // Load default content
+  showSection(defaultSection);
+
+  // Set default active button
+  buttons.forEach(button => {
+    if (button.id === defaultSection) {
+      button.classList.add("active");
+    }
+
+    button.addEventListener("click", function () {
+      buttons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+      showSection(this.id);
+    });
+  });
+
+  function showSection(section) {
+    // Your logic to filter or load project cards here
+    // You could show/hide cards or re-render
+    console.log("Show section:", section);
+  }
+});
+
