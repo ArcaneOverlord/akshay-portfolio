@@ -87,27 +87,7 @@ const projectData = {
     // more personal projects...
   ],
   client: [
-    {
-      title: "E-commerce Site",
-      description: "Built for a local clothing brand.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
-     {
-      title: "E-commerce Site",
-      description: "Built for a local clothing brand.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
-     {
-      title: "E-commerce Site",
-      description: "Built for a local clothing brand.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
+    
     // more client projects...
   ],
   collab: [
