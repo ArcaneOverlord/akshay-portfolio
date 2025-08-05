@@ -111,52 +111,35 @@ const projectData = {
     // more client projects...
   ],
   collab: [
-    {
-      title: "Hackathon App",
-      description: "Team project during a hackathon.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
-     {
-      title: "Hackathon App",
-      description: "Team project during a hackathon.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
-     {
-      title: "Hackathon App",
-      description: "Team project during a hackathon.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
+   
     // more collab projects...
   ]
 };
-
-
 function renderProjects(section) {
   const container = document.getElementById("projectList");
-  container.innerHTML = ""; // Clear previous
+  container.innerHTML = "";
 
-  projectData[section].forEach((project) => {
+  const projects = projectData[section];
+  if (!projects || !projects.length) {
+    container.innerHTML = noProjectsHTML;
+    return;
+  }
+
+  projects.forEach(proj => {
     const card = document.createElement("div");
     card.className = "projectCard";
 
     card.innerHTML = `
-      <div class="projectImage">
-        <img src="${project.image}" alt="${project.title}">
+      <div class="projectImageContainer">
+        <img src="${proj.image}" alt="${proj.title}">
       </div>
-      <div class="projectInfo">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        ${project.tech ? `<p class="techUsed">${project.tech.join(", ")}</p>` : ""}
-        <a href="${project.link}" target="_blank">View Project</a>
+      <div class="projectTextContainer">
+        <h3>${proj.title}</h3>
+        <p>${proj.description}</p>
+        <p class="techUsed">${proj.tech?.join(", ")}</p>
+        <a href="${proj.link}" target="_blank">View Project</a>
       </div>
     `;
-
     container.appendChild(card);
   });
 }

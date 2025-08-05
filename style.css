@@ -493,7 +493,7 @@ padding:5px; /* Padding for spacing */
 }
 
 
-.projectImage {
+.projectImageContainer {
   width: 50%;
   max-width: 350px;
   border-radius: 12px;
@@ -502,15 +502,17 @@ padding:5px; /* Padding for spacing */
   justify-content: center;
   align-items: center;
 }
+/* CSS changes */
 
-.projectImage img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* Before you had .projectImage img {…} */
+.projectImageContainer img {
+  width: 50%;
+  max-width: 350px;
   object-fit: cover;
 }
 
-.projectInfo {
+/* And .projectInfo was never used because JS injected .projectTextContainer */
+.projectTextContainer {
   width: 50%;
   padding: 1em;
   display: flex;
@@ -518,11 +520,23 @@ padding:5px; /* Padding for spacing */
   gap: 0.5em;
 }
 
-/* 🔁 Mobile override: image full width, text full width */
+/* Mobile override */
 @media (max-width: 768px) {
-  .projectImage, .projectInfo {
+  .projectImageContainer img,
+  .projectTextContainer {
     width: 100%;
   }
+}
+
+
+.hidden {
+  display:none;
+}
+
+.no-projects {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.7;
 }
 
 
