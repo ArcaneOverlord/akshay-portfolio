@@ -432,7 +432,7 @@ padding:5px; /* Padding for spacing */
   align-items: center;
  
   width: 100%;
-  height: 100%;
+  
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 1rem; /* Padding for spacing */
   background-color: transparent; /* Light background for contrast */
@@ -583,222 +583,158 @@ padding:5px; /* Padding for spacing */
 }
 
 
-
-
-
 .experience {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Full viewport height */
-  width: 100%;
+  width: 100vw;
+  height: 100vh; /* Keep this for scroll snap compatibility */
   overflow: hidden;
-  text-align: center; /* Center text */
-  background-color: red; /* Light background for contrast */
-  padding-left: 2vw;
-  padding-top: 2vh;
-  padding-right: 2vw;
-  padding-bottom:2vw;
-  gap:2vw;
-
+  max-width:100vw;
+  max-height: 100vh;
+  justify-content: center;
+  align-items: center; /* Prevent outer overflow */
+  padding: 3rem 4rem;
+  background-color: red;
 }
 
 .experienceBlock {
-  width:100%;
-  height:100%;
-  background-color: green;
-  display: flex;
-  flex-direction: column;
-  padding-left: 2vw;
-  padding-top:2vh;
-  padding-right: 2vw;
-  padding-bottom:2vw;
-  align-items: center;
-  justify-content: center;
-  gap:5px;
-
+  display: grid;
+  grid-template-rows: 1fr 7fr 2fr ;
+ width:100%;
+ height:100%;
+  gap:5px ;
+  background-color: #ffd700;
 }
 
 .experienceTitle {
-  
-  background-color: palegoldenrod;
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  max-height: 20vh;
-  justify-content:center;
-  align-items: center;
+
+  background-color: blue;
   text-align: center;
-  color:white;
-  justify-items: center;
-
-
 }
-
 
 .experienceWrapper {
-  flex: 7;
- display:flex;
- flex-direction:row;
- width:100%;
- background-color:red;
- height:100%;
- align-items: center;
- justify-content: center;
- gap:1rem;
- 
-}
-
-@media(max-width: 768px){
-  .experienceWrapper {
-  flex: 7;
- display:flex;
- flex-direction:column;
- width:100%;
- background-color:blue;
- height:100%;
- gap: 5px;
-  
- 
-}
-
-}
-
-.career{
-  flex:2;
-  background-color: purple;
-  border-radius: 10px;
-  padding:15px;
-}
-
-
-.experience1{
   display: flex;
-  flex-direction: column;
-  flex:1;
-  width:100%;
-  height:100%;
-  background-color: yellow;
-   align-items: center;
-  justify-content: center;
-  border-radius: 15px;
+  flex-direction: row;
+  background-color: grey;
   overflow: hidden;
+  gap: 10px;
+}
+.career {
+  color: white;
+  background-color: purple;
  
+}
+
+@media (max-width: 768px) {
   
+.experience {
+  padding: 1rem 0.3rem;
+  
+}
+  .experienceWrapper {
+    flex-direction: column;
+    overflow-y: auto; /* Scrollable on mobile */
+    gap: 5px;
+  }
+
+  .career,
+  .experience1, .experience2{
+    flex: 1; /* Equal heights in column layout */
+    width: 100%; /* Full width */
+    overflow: auto; /* Retain internal scrolling */
+  }
+
+  .experience1Info, .experience2Info {
+    flex-direction: column; /* Stack image and text on mobile */
+  }
+}
+
+
+
+.experience1 {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+ background-color: black;
 }
 
 .experience1Info {
- display: flex;
-  flex:2;
-  flex-direction: row;
-  background-color:red;
- width: 100%;
-  height: 100%;
+   display: grid;
+  grid-template-columns: 2fr 8fr;
+  background-color: aliceblue;
+  place-content: center;
 }
-.kfcImage{
-  flex: 2;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.kfc{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
- 
-}
-.kfcData{
-  flex: 8;
-  background-color:purple;
-  object-fit: cover;
 
+.kfcImage {
+  background-color: green;
+  display:flex;
+  
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.kfcImage img { /* Assuming an img tag with class .kfc */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kfcData {
+
+  overflow: hidden; /* Scroll for long text */
 }
 
 .experience1Text {
-  display: flex;
-  flex-direction: column;
-  flex:8;
-  background-color: grey;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  text-align: left;
+
+  background-color: aqua;
+ 
 }
 
-.experience2{
-  display: flex;
-  flex-direction: column;
-  flex:1;
-  width:100%;
-  height:100%;
-  background-color: yellow;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  overflow: hidden;
- 
 
- 
+.experience2 {
+ flex: 1;
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+ background-color: black;
 }
 
 .experience2Info {
- display: flex;
-  flex:2;
-  flex-direction: row;
-  background-color:red;
-  width: 100%;
-  height: 100%;
-  
+ display: grid;
+  grid-template-columns: 2fr 8fr;
+  background-color: aliceblue;
+  place-content: center;
+}
 
-}
-.gImage{
+.gImage {
+    background-color: green;
+  display:flex;
   flex: 2;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.gTec{
+
+.gImage img { /* Assuming an img tag with class .kfc */
+   width: 100%;
+  height: 100%;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
-.gData{
-  flex: 8;
-  background-color:purple;
-  width: 100%;
-  height: 100%;
+
+.gTec {
+
+  overflow: none; /* Scroll for long text *//
 }
 
 .experience2Text {
-  display: flex;
-  flex-direction: column;
-  flex:8;
-  background-color: violet;
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  justify-content: center;
-  text-align: left;
-   
+ background-color: slateblue;
 }
-
-
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height:100%; /* Full viewport height */
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
   text-align: center; /* Center text */
   background-color: yellow; /* Light background for contrast */
@@ -816,7 +752,7 @@ padding:5px; /* Padding for spacing */
   flex:7;
   background-color: red;
   width:100%;
- height: 100%;
+
 }
 
 .reach{
@@ -824,15 +760,22 @@ padding:5px; /* Padding for spacing */
   flex:3;
   background-color:blue;
   width:100%;
-  height: 100%;
+
   
 }
 
 
+.troll{
+  font-size:5px ;
+}
+
+
+
+/*
 
 .introBody, .projectbody, .experience, .contact {
-  overflow: hidden; /* Prevents margin collapse */
-  padding-bottom: 2vh; /* Instead of bottom margin */
+  overflow: hidden; 
+  padding-bottom: 2vh; 
 }
 .introBody, .projectbody, .experience, .contact {
   margin: 0;
@@ -872,5 +815,4 @@ html, body {
 
 
 
-  
   
