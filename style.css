@@ -691,10 +691,23 @@ padding:5px; /* Padding for spacing */
 .kfcImage{
   flex: 2;
   background-color: greenyellow;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kfc{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .kfcData{
   flex: 8;
   background-color:purple;
+  object-fit: cover;
+
 }
 
 .experience1Text {
@@ -727,6 +740,17 @@ padding:5px; /* Padding for spacing */
 .gImage{
   flex: 2;
   background-color: greenyellow;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gTec{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .gData{
   flex: 8;
