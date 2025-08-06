@@ -614,12 +614,15 @@ padding:5px; /* Padding for spacing */
   padding-top:2vh;
   padding-right: 2vw;
   padding-bottom:2vw;
+  align-items: center;
+  justify-content: center;
+  gap:5px;
 
 }
 
 .experienceTitle {
   
-  background-color: #ccc;
+  background-color: palegoldenrod;
   flex: 1;
   width: 100%;
   height: 100%;
@@ -627,24 +630,23 @@ padding:5px; /* Padding for spacing */
   justify-content:center;
   align-items: center;
   text-align: center;
-  color:black;
+  color:white;
   justify-items: center;
 
 
 }
 
-.experienceTitle h1{
-  margin-top:5vh;
-}
 
 .experienceWrapper {
   flex: 7;
  display:flex;
  flex-direction:row;
  width:100%;
- background-color:blue;
+ background-color:red;
  height:100%;
- 
+ align-items: center;
+ justify-content: center;
+ gap:1rem;
  
 }
 
@@ -666,6 +668,8 @@ padding:5px; /* Padding for spacing */
 .career{
   flex:2;
   background-color: purple;
+  border-radius: 10px;
+  padding:15px;
 }
 
 
@@ -676,7 +680,12 @@ padding:5px; /* Padding for spacing */
   width:100%;
   height:100%;
   background-color: yellow;
+   align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
  
+  
 }
 
 .experience1Info {
@@ -684,13 +693,12 @@ padding:5px; /* Padding for spacing */
   flex:2;
   flex-direction: row;
   background-color:red;
-  width: auto;
-  height: auto;
-
+ width: 100%;
+  height: 100%;
 }
 .kfcImage{
   flex: 2;
-  background-color: greenyellow;
+  background-color: transparent;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -702,6 +710,7 @@ padding:5px; /* Padding for spacing */
   object-fit: cover;
   width: 100%;
   height: 100%;
+ 
 }
 .kfcData{
   flex: 8;
@@ -712,10 +721,13 @@ padding:5px; /* Padding for spacing */
 
 .experience1Text {
   display: flex;
+  flex-direction: column;
   flex:8;
-  background-color: blue;
-  width: auto;
-  height: auto;
+  background-color: grey;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: left;
 }
 
 .experience2{
@@ -725,6 +737,12 @@ padding:5px; /* Padding for spacing */
   width:100%;
   height:100%;
   background-color: yellow;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+ 
+
  
 }
 
@@ -733,13 +751,14 @@ padding:5px; /* Padding for spacing */
   flex:2;
   flex-direction: row;
   background-color:red;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  
 
 }
 .gImage{
   flex: 2;
-  background-color: greenyellow;
+  background-color: transparent;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -755,14 +774,21 @@ padding:5px; /* Padding for spacing */
 .gData{
   flex: 8;
   background-color:purple;
+  width: 100%;
+  height: 100%;
 }
 
 .experience2Text {
   display: flex;
+  flex-direction: column;
   flex:8;
   background-color: violet;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  justify-content: center;
+  text-align: left;
+   
 }
 
 
