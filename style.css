@@ -65,7 +65,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 30vw;
+      width: 35vw;
       height: 100vh;
       background-color:#252525;
       z-index: 9500;
@@ -593,7 +593,7 @@ padding:5px; /* Padding for spacing */
   justify-content: center;
   align-items: center; /* Prevent outer overflow */
   padding: 3rem 4rem;
-  background-color: red;
+  background-color: transparent;
 }
 
 .experienceBlock {
@@ -602,12 +602,12 @@ padding:5px; /* Padding for spacing */
  width:100%;
  height:100%;
   gap:5px ;
-  background-color: #ffd700;
+  background-color: transparent;
 }
 
 .experienceTitle {
 
-  background-color: blue;
+  background-color: transparent;
   text-align: center;
 }
 
@@ -620,7 +620,10 @@ padding:5px; /* Padding for spacing */
 }
 .career {
   color: white;
+  text-align: center;
   background-color: purple;
+  padding: 1rem;
+  border-radius: 20px;
  
 }
 
@@ -654,30 +657,40 @@ padding:5px; /* Padding for spacing */
   flex: 1;
   display: grid;
   grid-template-rows: 2fr 8fr;
- background-color: black;
+ background-color:transparent;
+ place-content: center;
+ border: #ffd700 solid 2px;
+ 
+
 }
 
 .experience1Info {
    display: grid;
   grid-template-columns: 2fr 8fr;
-  background-color: aliceblue;
+  background-color: grey;
   place-content: center;
+  text-align: center;
+ 
 }
-
 .kfcImage {
-  background-color: green;
-  display:flex;
-  
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
+  width: 100%;
+  max-width: 6.5rem; /* adjust to fit your layout */
+  aspect-ratio: 1 / 1; /* square aspect ratio, change if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* center in parent */
 }
 
-.kfcImage img { /* Assuming an img tag with class .kfc */
+.kfcImage video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
+
+ 
 }
+
 
 .kfcData {
 
@@ -685,8 +698,9 @@ padding:5px; /* Padding for spacing */
 }
 
 .experience1Text {
-
+text-align: center;
   background-color: aqua;
+   border-bottom-left-radius: 30px;
  
 }
 
@@ -695,29 +709,38 @@ padding:5px; /* Padding for spacing */
  flex: 1;
   display: grid;
   grid-template-rows: 2fr 8fr;
- background-color: black;
+ background-color: transparent;
+ place-content: center;
+
+
+ 
 }
 
 .experience2Info {
  display: grid;
   grid-template-columns: 2fr 8fr;
-  background-color: aliceblue;
+  background-color: grey;
   place-content: center;
+  text-align: center;
 }
+
 
 .gImage {
-    background-color: green;
-  display:flex;
-  flex: 2;
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
+  width: 100%;
+  max-width: 6.5rem; /* adjust to fit your layout */
+  aspect-ratio: 1 / 1; /* square aspect ratio, change if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* center in parent */
 }
 
-.gImage img { /* Assuming an img tag with class .kfc */
-   width: 100%;
+.gImage video {
+  width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
+ 
 }
 
 .gTec {
@@ -727,6 +750,8 @@ padding:5px; /* Padding for spacing */
 
 .experience2Text {
  background-color: slateblue;
+ text-align: center;
+
 }
 .contact {
   display: flex;
@@ -766,7 +791,7 @@ padding:5px; /* Padding for spacing */
 
 
 .troll{
-  font-size:5px ;
+  font-size:10px ;
 }
 
 
