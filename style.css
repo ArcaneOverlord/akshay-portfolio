@@ -621,7 +621,11 @@ padding:5px; /* Padding for spacing */
   overflow-y:auto;
   gap: 1rem;
 
+
 }
+.experienceWrapper::-webkit-scrollbar {
+  display: none;}
+
 .career {
   color: white;
   text-align: center;
