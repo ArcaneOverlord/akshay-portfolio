@@ -1,3 +1,6 @@
+
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -805,22 +808,6 @@ text-align: left;
   width:100%;
 
 }
-
-#cert-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-#cert-gallery img {
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-}
-
 
 .reach{
   box-sizing: border-box;
