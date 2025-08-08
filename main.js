@@ -175,3 +175,35 @@ function findOverflowingElements() {
 
 findOverflowingElements();
 
+
+
+
+const container = document.getElementById('cert-gallery');
+const maxTries = 100; // Try up to 100 certs
+let index = 1;
+
+function loadNextImage() {
+  if (index > maxTries) return;
+
+  const img = document.createElement('img');
+  img.src = `https://yourusername.github.io/your-repo/assets/certificates/cert${index}.jpg`;
+  img.alt = `Certificate ${index}`;
+  img.loading = 'lazy';
+  img.style.maxWidth = '100%';
+  img.style.marginBottom = '1rem';
+
+  img.onload = () => {
+    container.appendChild(img);
+    index++;
+    loadNextImage(); // Load the next only if this one worked
+  };
+
+  img.onerror = () => {
+    console.log(`No more certs after cert${index - 1}.`);
+    // Do nothing — this stops the loop
+  };
+}
+
+// Start loading
+loadNextImage();
+
