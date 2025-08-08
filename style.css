@@ -584,6 +584,8 @@ padding:5px; /* Padding for spacing */
 
 
 .experience {
+  min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   width: 100vw;
   height: 100vh; /* Keep this for scroll snap compatibility */
@@ -615,8 +617,9 @@ padding:5px; /* Padding for spacing */
   display: flex;
   flex-direction: row;
   background-color: grey;
-  overflow: hidden;
-  gap: 10px;
+  overflow-y:auto;
+  gap: 2rem;
+
 }
 .career {
   color: white;
@@ -628,28 +631,30 @@ padding:5px; /* Padding for spacing */
 }
 
 @media (max-width: 768px) {
-  
-.experience {
-  padding: 1rem 0.3rem;
-  
-}
-  .experienceWrapper {
-    flex-direction: column;
-    overflow-y: auto; /* Scrollable on mobile */
-    gap: 5px;
+.experience{
+  padding: 1rem 1rem;
+}  
+
+  .experienceBlock {
+    grid-template-rows: auto auto; /* both rows height to content */
+    row-gap: 1rem;
   }
 
-  .career,
-  .experience1, .experience2{
-    flex: 1; /* Equal heights in column layout */
-    width: 100%; /* Full width */
-    overflow: auto; /* Retain internal scrolling */
-  }
 
-  .experience1Info, .experience2Info {
-    flex-direction: column; /* Stack image and text on mobile */
-  }
+
+.experienceWrapper{
+  flex-direction: column;
+  position: relative;
 }
+.career{
+  display: none;
+
+}
+
+}
+
+
+
 
 
 
@@ -659,7 +664,7 @@ padding:5px; /* Padding for spacing */
   grid-template-rows: 2fr 8fr;
  background-color:transparent;
  place-content: center;
- border: #ffd700 solid 2px;
+
  
 
 }
@@ -696,6 +701,10 @@ padding:5px; /* Padding for spacing */
 
   overflow: hidden; /* Scroll for long text */
 }
+
+
+
+
 
 .experience1Text {
 text-align: center;
@@ -753,6 +762,13 @@ text-align: center;
  text-align: center;
 
 }
+
+@media(max-width:990px){
+
+}
+
+
+
 .contact {
   display: flex;
   flex-direction: column;

@@ -77,13 +77,7 @@ const projectData = {
       tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
-     {
-      title: "Portfolio Website",
-      description: "A responsive portfolio using HTML, CSS, and JS.",
-      image: "assets/images/overlord mascot.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
-    },
+     
     // more personal projects...
   ],
   client: [
