@@ -587,23 +587,24 @@ padding:5px; /* Padding for spacing */
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh; /* Keep this for scroll snap compatibility */
   overflow: hidden;
-  max-width:100vw;
+  max-width:100%;
   max-height: 100vh;
   justify-content: center;
   align-items: center; /* Prevent outer overflow */
-  padding: 3rem 4rem;
+  padding: 1rem 5rem;
   background-color: transparent;
 }
 
 .experienceBlock {
+  box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 7fr 2fr ;
+  grid-template-rows: 1fr 7fr 2fr;
  width:100%;
  height:100%;
-  gap:5px ;
+  gap: 0.5rem;
   background-color: transparent;
 }
 
@@ -616,15 +617,15 @@ padding:5px; /* Padding for spacing */
 .experienceWrapper {
   display: flex;
   flex-direction: row;
-  background-color: grey;
+  background-color: transparent;
   overflow-y:auto;
-  gap: 2rem;
+  gap: 1rem;
 
 }
 .career {
   color: white;
   text-align: center;
-  background-color: purple;
+  background-color: #121212;
   padding: 1rem;
   border-radius: 20px;
  
@@ -672,7 +673,7 @@ padding:5px; /* Padding for spacing */
 .experience1Info {
    display: grid;
   grid-template-columns: 2fr 8fr;
-  background-color: grey;
+  background-color: #1a1a1a;
   place-content: center;
   text-align: center;
  
@@ -707,10 +708,12 @@ padding:5px; /* Padding for spacing */
 
 
 .experience1Text {
-text-align: center;
-  background-color: aqua;
+text-align: left;
+  background-color: #121212;
    border-bottom-left-radius: 30px;
- 
+  border-bottom-right-radius: 30px;
+  padding: 2rem;
+
 }
 
 
@@ -728,7 +731,7 @@ text-align: center;
 .experience2Info {
  display: grid;
   grid-template-columns: 2fr 8fr;
-  background-color: grey;
+  background-color: #1a1a1a;
   place-content: center;
   text-align: center;
 }
@@ -758,23 +761,25 @@ text-align: center;
 }
 
 .experience2Text {
- background-color: slateblue;
- text-align: center;
+ background-color: #121212;
+ text-align:left;
+ padding:2rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+ 
 
 }
 
-@media(max-width:990px){
-
-}
 
 
 
 .contact {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
   text-align: center; /* Center text */
@@ -789,6 +794,7 @@ text-align: center;
 
 
 .certificates{
+  box-sizing: border-box;
   display:flex;
   flex:7;
   background-color: red;
@@ -797,6 +803,7 @@ text-align: center;
 }
 
 .reach{
+  box-sizing: border-box;
   display:flex;
   flex:3;
   background-color:blue;
@@ -812,7 +819,7 @@ text-align: center;
 
 
 
-/*
+
 
 .introBody, .projectbody, .experience, .contact {
   overflow: hidden; 
@@ -850,8 +857,6 @@ html, body {
   background-color: #888;
   border-radius: 1px;
 }
-
-
 
 
 

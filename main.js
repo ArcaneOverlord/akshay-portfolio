@@ -148,3 +148,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // Trigger initial load+highlight
   document.querySelector('.sectionButton[data-section="personal"]').click();
 });
+
+
+
+//overflow detector
+function findOverflowingElements() {
+  const docWidth = document.documentElement.offsetWidth;
+
+  function checkElement(el) {
+    if (!(el instanceof HTMLElement)) return;
+    const elWidth = el.getBoundingClientRect().width;
+    const scrollWidth = el.scrollWidth;
+
+    if (scrollWidth > docWidth + 1) {  // +1 to handle sub-pixel rendering
+      el.style.outline = "2px solid red";
+      console.log("Overflowing:", el, `(${scrollWidth}px wide)`);
+    }
+
+    for (const child of el.children) {
+      checkElement(child);
+    }
+  }
+
+  checkElement(document.body);
+}
+
+findOverflowingElements();
+
