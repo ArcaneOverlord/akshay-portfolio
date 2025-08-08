@@ -186,7 +186,7 @@ function loadNextImage() {
   if (index > maxTries) return;
 
   const img = document.createElement('img');
-  img.src = `https://yourusername.github.io/your-repo/assets/certificates/cert${index}.jpg`;
+  img.src = `https://github.com/ArcaneOverlord/akshay-portfolio.git/assets/certificates/cert${index}.jpg`;
   img.alt = `Certificate ${index}`;
   img.loading = 'lazy';
   img.style.maxWidth = '100%';
