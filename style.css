@@ -120,7 +120,7 @@
     }
     .resume {
       font-size: 2.5vh;
-      margin-top: 10vh;
+      margin-top: 7vh;
       margin-bottom: 5vh;
       background-color: #000;
       color: #fff;
@@ -128,7 +128,7 @@
       padding: 0.5em 1em;
       cursor: pointer;
       border-radius: 50px;
-      margin-bottom: 10vh;
+      margin-bottom: 7vh;
 
     }
 
@@ -187,7 +187,7 @@
   font-size: 4vh;
   margin-right: 1vw;
   margin-left: 2vw;
-  margin-top: 2vh;
+  margin-top: 1vh;
   margin-bottom: 5vh;
   text-decoration: none;
   display: inline-block; /* Enable transform on anchor */
@@ -634,7 +634,7 @@ padding:5px; /* Padding for spacing */
   text-align: center;
   background-color: #121212;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 5px;
  
 }
 
@@ -683,6 +683,8 @@ padding:5px; /* Padding for spacing */
   background-color: #1a1a1a;
   place-content: center;
   text-align: center;
+   border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
  
 }
 .kfcImage {
@@ -717,8 +719,8 @@ padding:5px; /* Padding for spacing */
 .experience1Text {
 text-align: left;
   background-color: #121212;
-   border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+   border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 2rem;
 
 }
@@ -741,6 +743,8 @@ text-align: left;
   background-color: #1a1a1a;
   place-content: center;
   text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 
@@ -771,8 +775,8 @@ text-align: left;
  background-color: #121212;
  text-align:left;
  padding:2rem;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
  
 
 }
@@ -790,13 +794,8 @@ text-align: left;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
   text-align: center; /* Center text */
-  background-color: yellow; /* Light background for contrast */
-   padding-left: 2vw;
-  padding-top: 2vh;
-  padding-right: 2vw;
-  padding-bottom:2vw;
- 
-
+  background-color:transparent; /* Light background for contrast */
+padding:2rem 3rem;
 }
 
 
@@ -804,16 +803,48 @@ text-align: left;
   box-sizing: border-box;
   display:flex;
   flex:7;
-  background-color: red;
-  width:100%;
+  background-color:#0e0e0e ;
+  width:80%;
+  height: 300px;
+  border-radius: 3px;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
 }
+.cert{
+  position: absolute;
+  width:8rem;
+  height:auto;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.5 ease;
+  backdrop-filter: blur(4px);
+
+}
+
+.cert.active{
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+  backdrop-filter: none;
+}
+
+.cert.enter-left {
+  transform: translateX(-100%) scale(0.8);
+}
+.cert.enter-right {
+  transform: translateX(100%) scale(0.8);
+}
+
 
 .reach{
   box-sizing: border-box;
   display:flex;
   flex:3;
-  background-color:blue;
+  background-color: transparent;
   width:100%;
 
   

@@ -174,6 +174,18 @@ function findOverflowingElements() {
 }
 
 findOverflowingElements();
+//overfloe end
 
 
+const certs =document.querySelectorAll('.cert');
+let currentIndex =0;
 
+function showCert(index){
+  certs.forEach(cert => cert.classList.remove('active'));
+  certs[index].classList.add('active');
+}
+
+setInterval(() => {
+  currentIndex =(currentIndex + 1)% certs.length;
+  showCert(currentIndex);
+},3000);
