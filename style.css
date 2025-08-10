@@ -458,6 +458,7 @@ padding:5px; /* Padding for spacing */
 .projectCard {
   display: flex;
   flex-direction: row; /* side-by-side on desktop */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
@@ -468,9 +469,9 @@ padding:5px; /* Padding for spacing */
   color: white;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
   transition: transform 0.3s ease;
-
+min-width: 0;
   width: 100%;       /* Full width of container */
-  max-width: 1000px; /* Optional: prevent stretching too wide */
+  max-width: 900px; /* Optional: prevent stretching too wide */
 }
 
 /* 🔁 Mobile: stack image and text vertically */
@@ -478,7 +479,8 @@ padding:5px; /* Padding for spacing */
   .projectCard {
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Full width on mobile */
+    width: 100%;
+    max-width: 350px; /* Full width on mobile */
     max-height: 90vh; /* Prevents overflow */
   }
 }
@@ -502,7 +504,7 @@ padding:5px; /* Padding for spacing */
 
 .projectImageContainer {
   width: 50%;
-  max-width: 3500px;
+  max-width: 350px;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -525,6 +527,11 @@ padding:5px; /* Padding for spacing */
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+   white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 /* Mobile override */
@@ -591,11 +598,11 @@ padding:5px; /* Padding for spacing */
 
 
 .experience {
-  min-height: 100vh;
+
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 100vh; /* Keep this for scroll snap compatibility */
+  height: 100%; /* Keep this for scroll snap compatibility */
   overflow: hidden;
   max-width:100%;
   max-height: 100vh;
@@ -648,8 +655,12 @@ padding:5px; /* Padding for spacing */
 .career p{
 font-size: 1rem;
 }
-
-@media (max-width: 768px) {
+@media(max-width:768px){
+ .career{
+  display: none;
+ }
+}
+@media (max-width:1050px) {
 .experience{
   padding: 1rem 1rem;
 }  
@@ -664,11 +675,10 @@ font-size: 1rem;
 .experienceWrapper{
   flex-direction: column;
   position: relative;
+ 
+  
 }
-.career{
-  display: none;
 
-}
 
 }
 
@@ -844,19 +854,40 @@ padding:0rem 3rem;
   background: #0e0e0e;
   flex-wrap: wrap;
   gap:20px;
-  position: relative;
-  max-height: 50vh;
+
+  max-height: 70vh;
+overflow: auto;
+justify-content: center;
+align-items: center;
 }
+
+.certificates::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
 .certContainer{
  display:flex;
-  max-width: 25%;
-  max-height: 50%;
+  width: 25%;
+  height: 50%;
 
 }
 .certContainer img{
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+@media(max-width:768px){
+  .certificates{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+.certContainer{
+ display:flex;
+  width: 100%;
+  height: 50%;
+
+}
 }
 .reach{
   box-sizing: border-box;
