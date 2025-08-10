@@ -10,7 +10,7 @@
       padding: 0;
       background: black;
       color: #fff;
-      font-family: sans-serif;
+      font-family: "roboto" ,sans-serif;
       overflow-x: hidden;
       max-width: 100%;
       overscroll-behavior: none;
@@ -80,6 +80,7 @@
       opacity: 0;
       pointer-events: none;
       align-items: center;
+      font-family: roboto;
      
     }
 
@@ -266,6 +267,7 @@
 
 .introText1 {
   font-size: 2rem; /* Responsive font size */
+  font-family: "Montserrat",sans-serif;
   color: #ffd700;
   margin-top: 3vh;
   margin-bottom: 1vh;
@@ -275,7 +277,7 @@
 }
 
 .introText2, .introText3, .introText4, .introText5, .introText6 {
-  font-size: 1rem; /* Responsive font size */
+  font-size: 1.2rem; /* Responsive font size */
   color: #fff;
   margin-left: 1vw;
   margin-right: 1vw;
@@ -372,6 +374,7 @@ padding-top: 2vh; /* Padding for spacing */
 
 .projectText{
   font-size: 1.5rem;   /* Responsive font size */
+  font-family: "montserrat",sans-serif;
   color: white;
  text-align: center;
  justify-self: center;
@@ -459,7 +462,7 @@ padding:5px; /* Padding for spacing */
   justify-content: space-between;
 
   background-color: #111;
-  border: 1px solid #ffd700;
+ 
   border-radius: 15px;
   padding: 1vh 1vw;
   color: white;
@@ -476,7 +479,7 @@ padding:5px; /* Padding for spacing */
     flex-direction: column;
     align-items: center;
     width: 100%; /* Full width on mobile */
-    max-height:70vh; /* Prevents overflow */
+    max-height: 90vh; /* Prevents overflow */
   }
 }
 
@@ -486,6 +489,7 @@ padding:5px; /* Padding for spacing */
 
 .projectCard:hover {
   transform: scale(1.05);
+  border:1px solid #ffd700;
 }
 
 #projectList {
@@ -498,7 +502,7 @@ padding:5px; /* Padding for spacing */
 
 .projectImageContainer {
   width: 50%;
-  max-width: 350px;
+  max-width: 3500px;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -637,6 +641,13 @@ padding:5px; /* Padding for spacing */
   border-radius: 5px;
  
 }
+.career h3{
+  font-size: 1.2rem;
+  font-family:"montserrat",sans-serif
+}
+.career p{
+font-size: 1rem;
+}
 
 @media (max-width: 768px) {
 .experience{
@@ -663,7 +674,9 @@ padding:5px; /* Padding for spacing */
 
 
 
-
+.pastexp{
+  font-size: 1.5rem;
+}
 
 
 .experience1 {
@@ -710,9 +723,23 @@ padding:5px; /* Padding for spacing */
 .kfcData {
 
   overflow: hidden; /* Scroll for long text */
+  line-height: 0.8rem;
+ 
 }
 
-
+.expTitle{
+  font-size: 1.5rem;
+  font-family:"montserrat",sans-serif;
+  color: #ffd700;
+}
+.expComp{
+  font-size: 1.2rem;
+  color: white;
+}
+.expDura{
+  font-size: 1rem;
+  color:#ccc
+}
 
 
 
@@ -722,7 +749,11 @@ text-align: left;
    border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 2rem;
-
+ font-size: 1.2rem;
+ line-height: 1.6rem;
+}
+.experience1Text  li::marker{
+  color:#ffd700
 }
 
 
@@ -766,9 +797,11 @@ text-align: left;
  
 }
 
-.gTec {
+.gData {
 
-  overflow: none; /* Scroll for long text *//
+  overflow: hidden; /* Scroll for long text */
+  line-height: 0.8rem;
+ 
 }
 
 .experience2Text {
@@ -777,10 +810,14 @@ text-align: left;
  padding:2rem;
 border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
- 
+ font-size: 1.2rem;
+  line-height: 1.6rem;
 
 }
 
+.experience2Text  li::marker{
+  color:#ffd700
+}
 
 
 
@@ -831,10 +868,6 @@ padding:0rem 3rem;
   
 }
 
-
-.troll{
-  font-size:10px ;
-}
 
 
 

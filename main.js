@@ -65,8 +65,8 @@ const projectData = {
   personal: [
     {
       title: "Portfolio Website",
-      description: "A responsive portfolio using HTML, CSS, and JS.",
-      image: "assets/images/overlord mascot.png",
+      description: "A responsive portfolio using HTML, CSS, and JS.rehvb foauiwyegrcuoaywegrcuwygehgvckhwegdvkeadghvakjfdhvLJHEFVAJKHFVLAJHFVLJWHEVFALWUHEFVLAWEHFVLJAHVDFJhvefjhwvefkjhvfkjHEVFjhevfKJHEVFjhewvf",
+      image: "assets/images/project/project01.png",
       tech: ["HTML", "CSS", "JavaScript"],
       link: "#"
     },
