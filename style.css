@@ -869,7 +869,10 @@ align-items: center;
  display:flex;
   width: 25%;
   height: 50%;
-
+transition:border 0.5sec ease;
+}
+.certcontainer img:hover{
+  border: #ffd700 solid 2px;
 }
 .certContainer img{
   width: 100%;
@@ -893,10 +896,42 @@ align-items: center;
   box-sizing: border-box;
   display:flex;
   flex:3;
-  background-color: transparent;
+  background-color: red;
   width:100%;
 
   
+}
+.r1{
+flex:1;
+place-content: center;
+font-size: 1.2rem;
+line-height:1.2rem;
+}
+
+.r2{
+  flex:1;
+  
+place-content: center;
+font-size: 1.2rem;
+line-height:1.2rem;
+}
+
+
+.r3{
+  flex:1;
+  
+place-content: center;
+font-size: 1.2rem;
+line-height:1.2rem;
+}
+
+
+.r4{
+  flex:1;
+  
+place-content: center;
+font-size: 1.2rem;
+line-height:1.2rem;
 }
 
 
