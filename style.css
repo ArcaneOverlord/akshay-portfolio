@@ -704,20 +704,17 @@ font-size: 1rem;
 .experience{
   padding: 1rem 1rem;
 }  
-
-  .experienceBlock {
-    grid-template-rows: auto auto; /* both rows height to content */
-    row-gap: 1rem;
-  }
-
-
+ 
 
 .experienceWrapper{
   flex-direction: column;
-
- 
   
 }
+  .experienceBlock {
+    grid-template-rows: auto 1fr auto; /* both rows height to content */
+    row-gap: 1rem;
+  }
+
 
 
 }
@@ -741,6 +738,7 @@ font-size: 1rem;
 
 .pastexp{
   font-size: 1.5rem;
+  font-family: "montserrat",sans-serif;
 }
 
 
@@ -883,6 +881,12 @@ border-bottom-left-radius: 5px;
 .experience2Text  li::marker{
   color:#ffd700
 }
+@media(max-width:1050px){
+   .experience1, .experience2{
+      grid-template-rows: auto auto;
+     
+  }
+}
 
 @media(max-width:768px){
   .experience1, .experience2{
@@ -918,6 +922,14 @@ border-bottom-left-radius: 5px;
 padding:0rem 3rem;
 gap:1.5rem;
 }
+
+
+
+.certText{
+  font-size: 1.5rem;
+  font-family: "montserrat",sans-serif;
+}
+
 /* grid wrapper */
 .certificates{
   flex:7;
@@ -927,7 +939,7 @@ gap:1.5rem;
           /* allow internal scroll if too many certs */
   background: #0e0e0e;
   flex-wrap: wrap;
-  gap:10px;
+  gap:0.5rem;
 padding:auto;
   max-height: 70vh;
   width:auto ;
@@ -958,9 +970,14 @@ transition:border 0.5sec ease;
 }
 
 @media(max-width:768px){
- 
+ .certificates{
+  max-width: 90%;
+  padding:0rem;
+  margin-top: -2rem;
+  gap:auto;
+ }
 .contact {
-padding:1rem 1rem;
+padding:0rem;
 }
   
 .certContainer{
@@ -978,21 +995,25 @@ padding:1rem 1rem;
   display:flex;
   flex:3;
   flex-direction: row;
-  background-color:blue;
-  width:100%;
+  background-color:transparent;
+ width:90%;
   text-decoration: none;
+  border-radius: 5px;
 
   
 }
 .contactme{
   flex:1;
+ justify-content: center;
+  align-content: center;
   text-align: center;
-  justify-items: center;
-  align-items: center;
+display: flex;
+flex-direction: column;
   font-size: large;
   color:white;
   font-family: "Montserrat",sans-serif;
   background-color: #1a1a1a;
+
 }
 .r1{
 flex:1;
@@ -1019,6 +1040,51 @@ color: white;
   background-color: transparent;
   flex: 1;
 }
+.publish{
+  background-color:transparent;
+  flex: 1;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+
+
+.reachMobile{
+  box-sizing: border-box;
+  display:none;
+  flex:3;
+  flex-direction: row;
+  background-color:transparent;
+ width:100%;
+  text-decoration: none;
+  border-radius: 5px;
+
+  
+}
+.updateMobile{
+  display:none;
+}
+@media(max-width:768px){
+  .reachMobile{
+    display:flex;
+
+  }
+  .reach{
+    display:none;
+  }
+  .updateMobile{
+    display:flex;
+    margin:-1rem;
+
+  }
+}
+
+
+
+
+
 
 .introBody, .projectbody, .experience, .contact {
   overflow: hidden; 
@@ -1058,6 +1124,3 @@ html, body {
 }
 
 
-
-
-  
