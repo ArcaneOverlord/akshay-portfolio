@@ -871,14 +871,16 @@ align-items: center;
   height: 50%;
 transition:border 0.5sec ease;
 }
-.certcontainer img:hover{
-  border: #ffd700 solid 2px;
-}
+
+ 
+
 .certContainer img{
   width: 100%;
   height: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
+
 @media(max-width:768px){
   .certificates{
     flex-direction: column;
@@ -896,8 +898,10 @@ transition:border 0.5sec ease;
   box-sizing: border-box;
   display:flex;
   flex:3;
-  background-color: red;
+  flex-direction: row;
+  background-color:transparent;
   width:100%;
+  text-decoration: none;
 
   
 }
@@ -905,37 +909,23 @@ transition:border 0.5sec ease;
 flex:1;
 place-content: center;
 font-size: 1.2rem;
-line-height:1.2rem;
+line-height:1.7rem;
+display: flex;
+flex-direction: column;
+background-color: transparent;
+
 }
 
-.r2{
-  flex:1;
-  
-place-content: center;
-font-size: 1.2rem;
-line-height:1.2rem;
+.r1 a{
+text-decoration: none;
+cursor: pointer;
+color: white;
 }
-
-
-.r3{
-  flex:1;
-  
-place-content: center;
-font-size: 1.2rem;
-line-height:1.2rem;
+.r1 a:hover{
+  transform: scale(1.1);
+  color:#ffd700;
+  transition: transform 0.3sec ease,color 0.3sec ease;
 }
-
-
-.r4{
-  flex:1;
-  
-place-content: center;
-font-size: 1.2rem;
-line-height:1.2rem;
-}
-
-
-
 
 
 
