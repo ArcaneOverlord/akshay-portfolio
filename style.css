@@ -957,7 +957,7 @@ align-items: center;
  display:flex;
   width: 24%;
   height: 50%;
-transition:border 0.5sec ease;
+
 }
 
  
@@ -969,6 +969,16 @@ transition:border 0.5sec ease;
   cursor: pointer;
 }
 
+@media(max-width:1000px){
+
+.certContainer{
+ display:flex;
+  width: 32%;
+  height: auto;
+
+}
+
+}
 @media(max-width:768px){
  .certificates{
   max-width: 90%;
@@ -982,7 +992,7 @@ padding:0rem;
   
 .certContainer{
  display:flex;
-  width: 100%;
+  width: 48%;
   height:auto;
   max-height: 100%;
 }
@@ -990,6 +1000,21 @@ padding:0rem;
 
 }
 
+@media(max-width:450px){
+ .certificates{
+
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+  gap:auto;
+ }
+
+.certContainer{
+ display:flex;
+  width: 90%;
+  height: auto;
+
+}
+}
 .reach{
   box-sizing: border-box;
   display:flex;
@@ -999,12 +1024,15 @@ padding:0rem;
  width:90%;
   text-decoration: none;
   border-radius: 5px;
+  height: auto;
+  max-height: 200px;
 
   
 }
 .contactme{
   flex:1;
  justify-content: center;
+
   align-content: center;
   text-align: center;
 display: flex;
@@ -1060,11 +1088,18 @@ color: white;
  width:100%;
   text-decoration: none;
   border-radius: 5px;
+  max-height: 130px;
 
   
 }
 .updateMobile{
   display:none;
+}
+
+@media(max-width:1000px){
+  .reach{
+  max-height: 150px;
+  }
 }
 @media(max-width:768px){
   .reachMobile{
