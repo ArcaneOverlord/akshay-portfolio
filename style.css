@@ -70,7 +70,7 @@
       right: 0;
       width: 35vw;
       height: 100vh;
-      background-color:#252525;
+      background-color: grey;
       z-index: 9500;
       padding: 3rem 2rem;
       display: flex;
@@ -97,6 +97,8 @@
       cursor: pointer;
       transition: color 0.2s ease;
       text-decoration: none;
+        
+       
     
       
     }
@@ -149,13 +151,19 @@
     }
 
     
-    @media (max-width: 1025px) {
+    @media (max-width: 1075px) {
       .menu {
-        width: 40vw;
+        width: 50vw;
         
       }
     }
-    
+
+     @media (max-width: 900px) {
+      .menu {
+        width: 50vw;
+        
+      }
+     }
 
 
     @media (max-width: 770px) {
@@ -528,9 +536,30 @@ min-width: 0;
   }
 }
 
+@media(max-width:370px){
+    .projectCard {
+    
+    max-width:270px; /* Full width on mobile */
+    
+  }
+}
 
 
+@media(max-width:350px){
+    .projectCard {
+    
+    max-width:250px; /* Full width on mobile */
+    
+  }
+}
 
+@media(max-width:320px){
+    .projectCard {
+    
+    max-width:220px; /* Full width on mobile */
+    
+  }
+}
 
 
 .projectCard:hover {
@@ -576,6 +605,16 @@ min-width: 0;
   word-wrap: break-word;
   flex-shrink: 1;
   min-width: 0;
+}
+.projIcon{
+  display: flex;
+  flex-direction: row;
+  gap:1.4rem;
+}
+.projIcon i{
+ font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
 }
 
 /* Mobile override */

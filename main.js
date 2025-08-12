@@ -68,7 +68,8 @@ const projectData = {
       description: "A responsive portfolio using HTML, CSS, and JS.rehvb foauiwyegrcuoaywegrcuwygehgvckhwegdvkeadghvakjfdhvLJHEFVAJKHFVLAJHFVLJWHEVFALWUHEFVLAWEHFVLJAHVDFJhvefjhwvefkjhvfkjHEVFjhevfKJHEVFjhewvf",
       image: "assets/images/project/project01.png",
       tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
+      link: "#",
+      github:"#"
     },
      {
       title: "Portfolio Website",
@@ -120,7 +121,14 @@ function renderProjects(section) {
         <h3>${proj.title}</h3>
         <p>${proj.description}</p>
         <p class="techUsed">${(proj.tech||[]).join(", ")}</p>
-        <a href="${proj.link}" target="_blank">View Project</a>
+        <div class="projIcon" id="projIcon">
+        <a href="${proj.link}" target="_blank">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a href="${proj.github}" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        </div>
       </div>
     `;
     container.appendChild(card);
