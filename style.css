@@ -607,11 +607,27 @@ min-width: 0;
   flex-shrink: 1;
   min-width: 0;
 }
+.projectTextContainer h3{
+align-self: center;
+justify-content:center;
+text-align: center;
+font-size: 1.5rem;
+font-family: "Montserrat",sans-serif;
+}
+.techUsed{
+  align-self: center;
+justify-content:center;
+text-align: center;
+}
+
 .projIcon{
   display: flex;
   flex-direction: row;
   gap:1.4rem;
    margin-left:1rem;
+     align-self: center;
+justify-content:center;
+text-align: center;
 }
 .projIcon i{
  font-size: 1.5rem;
@@ -632,8 +648,7 @@ min-width: 0;
   .projectTextContainer{
     text-align: center;
   }
-  .projIcon{
-    align-items: center;
+  .projIcon{ 
     justify-content: center;
     gap:2.5rem;
   }

@@ -65,7 +65,7 @@ const projectData = {
   personal: [
     {
       title: "Portfolio Website",
-      description: "A responsive portfolio using HTML, CSS, and JS.rehvb foauiwyegrcuoaywegrcuwygehgvckhwegdvkeadghvakjfdhvLJHEFVAJKHFVLAJHFVLJWHEVFALWUHEFVLAWEHFVLJAHVDFJhvefjhwvefkjhvfkjHEVFjhevfKJHEVFjhewvf",
+      description:"This is my personal portfolio showcasing my skills, projects, and credentials as a developer. It’s designed to be clean, responsive, and easy to navigate, highlighting my work across personal, client, and collaborative projects. Visitors can explore my certifications, see interactive previews of my work, and connect with me for potential collaborations or opportunities. The site adapts to all screen sizes, ensuring a smooth browsing experience whether on desktop or mobile.",
       image: "assets/images/project/p1p1.png",
       tech: ["HTML", "CSS", "JavaScript"],
       link: "#",
