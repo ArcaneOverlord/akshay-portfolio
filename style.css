@@ -637,6 +637,20 @@ min-width: 0;
     justify-content: center;
     gap:2.5rem;
   }
+  
+.projectImageContainer {
+  width: 100%;
+  max-width: auto;
+
+}
+/* CSS changes */
+
+/* Before you had .projectImage img {…} */
+.projectImageContainer img {
+  width: 100%;
+  max-width: 450px;
+  object-fit: cover;
+}
 }
 
 
@@ -1009,7 +1023,7 @@ padding:auto;
   max-height: 70vh;
   width:auto ;
   max-width: 90%;
-  min-width: 89%;
+  min-width: 85%;
 overflow: auto;
 justify-content: center;
 align-items: center;
@@ -1020,12 +1034,16 @@ align-items: center;
 }
 
 .certContainer{
- display:flex;
+ display:inline-flex;
   width: auto;
   height:99%;
 gap:1rem;
 position: relative;
 overflow: hidden;
+align-items: center;
+justify-content: center;
+transition: transform .25 ease;
+box-sizing: border-box;
 }
 
  
@@ -1036,37 +1054,102 @@ overflow: hidden;
   object-fit: contain;
   cursor: pointer;
   display: block;
-   transition: .5s ease;
+   transition: .35s ease;
   backface-visibility: hidden;
     opacity: 1;
   
 }
 
 
-.certContainer img:hover{
-  transform: scale(1.03);
-
-}
-
 .cert-caption{
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  color:#ffd700;
-  padding: 15px;
+  box-sizing: border-box;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color:#fff;
+
   transform: translateY(100%);
-  transition: transform 0.4s ease;
+  transition: transform 0.35s ease;
+  z-index:5;
+  pointer-events: none;
 }
 
-.certContainer img:hover .cert-caption{
+.certContainer:hover .cert-caption{
   transform: translateY(0);
 }
 
-.cert-caption.show {
-  transform: translateY(0);
+/* small scale effect on hover */
+.certContainer:hover img {
+  transform: scale(1.03);
 }
+
+/* class you can toggle via JS for touch devices */
+.certContainer.show-caption .cert-caption {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.certContainer.show-caption img {
+  transform: scale(1.03);
+}
+
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 100000; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #ccc;
+  max-width: 80%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+
+
 
 /*
 @media(max-width:1025px){

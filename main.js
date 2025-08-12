@@ -267,8 +267,29 @@ function updateProjectButton(section) {
 */
 
 
-document.querySelectorAll('.cert-card').forEach(card => {
-  card.addEventListener('click', () => {
-    card.querySelector('.cert-caption').classList.toggle('show');
+// Modal elements
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("modalImage");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".close");
+
+// Select all certificate images
+document.querySelectorAll(".certContainer img").forEach(img => {
+  img.addEventListener("click", function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.textContent = this.alt || ""; // show alt text if available
   });
+});
+
+// Close modal when X is clicked
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+// Close modal if clicking outside the image
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
 });
