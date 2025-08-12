@@ -565,6 +565,7 @@ min-width: 0;
 .projectCard:hover {
   transform: scale(1.02);
   border:1px solid #ffd700;
+  transition: transform 0.5sec ease;
 }
 
 #projectList {
@@ -577,7 +578,7 @@ min-width: 0;
 
 .projectImageContainer {
   width: 50%;
-  max-width: 350px;
+  max-width: 450px;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -588,8 +589,8 @@ min-width: 0;
 
 /* Before you had .projectImage img {…} */
 .projectImageContainer img {
-  width: 50%;
-  max-width: 350px;
+  width: 100%;
+  max-width: 450px;
   object-fit: cover;
 }
 
@@ -610,20 +611,35 @@ min-width: 0;
   display: flex;
   flex-direction: row;
   gap:1.4rem;
+   margin-left:1rem;
 }
 .projIcon i{
  font-size: 1.5rem;
   text-decoration: none;
   color: white;
+  
+ 
 }
 
 /* Mobile override */
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .projectImageContainer img,
   .projectTextContainer {
     width: 100%;
   }
+  
+
+  .projectTextContainer{
+    text-align: center;
+  }
+  .projIcon{
+    align-items: center;
+    justify-content: center;
+    gap:2.5rem;
+  }
 }
+
+
 
 .no-projects-fallback {
   display: flex;
@@ -939,6 +955,7 @@ border-bottom-left-radius: 5px;
   }
   .experience2Text, .experience1Text {
     padding:0rem;
+    padding: 2rem;
   }
   
 .expTitle{
@@ -992,6 +1009,7 @@ padding:auto;
   max-height: 70vh;
   width:auto ;
   max-width: 90%;
+  min-width: 89%;
 overflow: auto;
 justify-content: center;
 align-items: center;
@@ -1003,9 +1021,11 @@ align-items: center;
 
 .certContainer{
  display:flex;
-  width: 24%;
-  height: 50%;
-
+  width: auto;
+  height:99%;
+gap:1rem;
+position: relative;
+overflow: hidden;
 }
 
  
@@ -1015,8 +1035,40 @@ align-items: center;
   height: 100%;
   object-fit: contain;
   cursor: pointer;
+  display: block;
+   transition: .5s ease;
+  backface-visibility: hidden;
+    opacity: 1;
+  
 }
 
+
+.certContainer img:hover{
+  transform: scale(1.03);
+
+}
+
+.cert-caption{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  color:#ffd700;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.certContainer img:hover .cert-caption{
+  transform: translateY(0);
+}
+
+.cert-caption.show {
+  transform: translateY(0);
+}
+
+/*
 @media(max-width:1025px){
 
 .certContainer{
@@ -1024,9 +1076,10 @@ align-items: center;
   width: 32%;
   height: auto;
 
-}
 
-}
+}  }*/
+
+
 @media(max-width:770px){
  .certificates{
   max-width: 90%;
@@ -1058,8 +1111,9 @@ padding:0rem;
 
 .certContainer{
  display:flex;
-  width: 90%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  
 
 }
 }

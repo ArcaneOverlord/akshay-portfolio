@@ -66,7 +66,7 @@ const projectData = {
     {
       title: "Portfolio Website",
       description: "A responsive portfolio using HTML, CSS, and JS.rehvb foauiwyegrcuoaywegrcuwygehgvckhwegdvkeadghvakjfdhvLJHEFVAJKHFVLAJHFVLJWHEVFALWUHEFVLAWEHFVLJAHVDFJhvefjhwvefkjhvfkjHEVFjhevfKJHEVFjhewvf",
-      image: "assets/images/project/project01.png",
+      image: "assets/images/project/p1p1.png",
       tech: ["HTML", "CSS", "JavaScript"],
       link: "#",
       github:"#"
@@ -196,5 +196,79 @@ document.querySelectorAll('.menu h6').forEach(item => {
       document.querySelector('.menu').classList.remove('active');
       document.querySelector('.container').classList.remove('change');
     }
+  });
+});
+
+
+
+
+/*
+
+const sectionActions = {
+  personal: {
+    text: "Show More",
+    onClick: () => {
+      alert("Showing more personal projects!");
+      // custom logic for personal projects
+    }
+  },
+  clients: {
+    text: "Hire Me!",
+    onClick: () => {
+      alert("Contacting for client work...");
+      // open your contact form or redirect to email
+    }
+  },
+  collab: {
+    text: "Let's Collab!",
+    onClick: () => {
+      alert("Starting a collaboration!");
+      // collaboration-related logic
+    }
+  }
+};
+
+const projectActionBtn = document.getElementById("projectActionBtn");
+
+// This function updates the button whenever a section changes
+function updateProjectButton(section) {
+  if (sectionActions[sectionKey]) {
+    projectActionBtn.textContent = sectionActions[sectionKey].text;
+    projectActionBtn.onclick = sectionActions[sectionKey].onClick;
+    projectActionBtn.style.display = "inline-block"; // show button
+  } else {
+    projectActionBtn.style.display = "none"; // hide button if section unknown
+  }
+}
+
+// Example: call this when tab changes
+// updateProjectButton("personal");
+// updateProjectButton("clients");
+// updateProjectButton("collab");
+
+
+
+
+#projectActionBtn {
+  padding: 10px 20px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+#projectActionBtn:hover {
+  background: #e6b800;
+}
+*/
+
+
+document.querySelectorAll('.cert-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.querySelector('.cert-caption').classList.toggle('show');
   });
 });
