@@ -149,7 +149,7 @@
     }
 
     
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
       .menu {
         width: 40vw;
         
@@ -158,7 +158,7 @@
     
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 770px) {
       .menu {
         width: 70vw;
         
@@ -236,7 +236,7 @@
   flex-shrink: 0;
   position: relative; /* Position relative for absolute children */
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .profileWrapper {
     width: 130px; /* Smaller size for mobile */
     height: 130px;
@@ -286,7 +286,7 @@
 
 
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
  .introText4{
   display: none; /* Hide on smaller screens */
  }
@@ -402,7 +402,7 @@ padding-top: 2vh; /* Padding for spacing */
   gap: 2vw; /* Space between buttons */
   border-radius: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .sectionButton {
     width: 7rem/* Adjust width for smaller screens */
     
@@ -426,7 +426,7 @@ padding-top: 2vh; /* Padding for spacing */
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   
 .projectShell{
 padding:5px; /* Padding for spacing */
@@ -495,7 +495,7 @@ min-width: 0;
   }
 }
 /* 🔁 Mobile: stack image and text vertically */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .projectCard {
     flex-direction: column;
     align-items: center;
@@ -534,7 +534,7 @@ min-width: 0;
 
 
 .projectCard:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   border:1px solid #ffd700;
 }
 
@@ -579,7 +579,7 @@ min-width: 0;
 }
 
 /* Mobile override */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .projectImageContainer img,
   .projectTextContainer {
     width: 100%;
@@ -700,7 +700,7 @@ min-width: 0;
 font-size: 1rem;
 }
 
-@media (max-width:1000px) {
+@media (max-width:1025px) {
 .experience{
   padding: 1rem 1rem;
 }  
@@ -719,7 +719,7 @@ font-size: 1rem;
 
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
  .career{
   display: none;
  }
@@ -881,7 +881,7 @@ border-bottom-left-radius: 5px;
 .experience2Text  li::marker{
   color:#ffd700
 }
-@media(max-width:1000px){
+@media(max-width:1025px){
    .experience1, .experience2 {
       grid-template-rows:auto auto;
   
@@ -894,7 +894,7 @@ border-bottom-left-radius: 5px;
   
 }
 
-@media(max-width:768px){
+@media(max-width:770px){
   .experience1, .experience2{
       grid-template-rows: auto auto;
   }
@@ -978,7 +978,7 @@ align-items: center;
   cursor: pointer;
 }
 
-@media(max-width:1000px){
+@media(max-width:1025px){
 
 .certContainer{
  display:flex;
@@ -988,7 +988,7 @@ align-items: center;
 }
 
 }
-@media(max-width:768px){
+@media(max-width:770px){
  .certificates{
   max-width: 90%;
   padding:0rem;
@@ -1105,12 +1105,12 @@ color: white;
   display:none;
 }
 
-@media(max-width:1000px){
+@media(max-width:1025px){
   .reach{
   max-height: 150px;
   }
 }
-@media(max-width:768px){
+@media(max-width:767px){
   .reachMobile{
     display:flex;
 
@@ -1157,6 +1157,7 @@ html, body {
 .snap-section {
   height: 100vh;
   scroll-snap-align: start;
+   scroll-snap-stop: always;
 }
 .scroll-container::-webkit-scrollbar {
   width: 2px;

@@ -176,5 +176,17 @@ function findOverflowingElements() {
 findOverflowingElements();
 //overfloe end
 
+document.querySelectorAll('.menu h6').forEach(item => {
+  item.addEventListener('click', () => {
+    const sectionId = item.getAttribute('data-target');
+    const section = document.getElementById(sectionId);
 
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
 
+      // Optional: Close menu after click
+      document.querySelector('.menu').classList.remove('active');
+      document.querySelector('.container').classList.remove('change');
+    }
+  });
+});
