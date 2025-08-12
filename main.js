@@ -26,6 +26,27 @@ if (resumeButton) {
   });
 }
 
+
+
+const aboutBtn = document.getElementById("about");
+const aboutOverlay = document.getElementById("about-overlay");
+const closeAbout = document.querySelector(".close-about");
+
+aboutBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  aboutOverlay.classList.add("active");
+});
+
+closeAbout.addEventListener("click", () => {
+  aboutOverlay.classList.remove("active");
+});
+
+
+
+
+
+
+
 // Clock
 function updateClock() {
   const clockElement = document.getElementById("clock");
