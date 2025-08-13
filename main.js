@@ -93,11 +93,12 @@ const projectData = {
       github:"#"
     },
      {
-      title: "Portfolio Website",
-      description: "A responsive portfolio using HTML, CSS, and JS.",
-      image: "assets/images/overlord mascot.png",
+      title: "A jobfair website concept",
+      description: "A work in progress website featuring forms and live preview ",
+      image: "assets/images/project/project2/p2p1.png",
       tech: ["HTML", "CSS", "JavaScript"],
-      link: "#"
+      link: "#",
+         github:"#"
     },
      
     // more personal projects...
