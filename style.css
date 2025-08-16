@@ -1342,6 +1342,46 @@ z-index: 1000;
   display:none;
 }
 
+
+.contactmeMob{
+  flex:1;
+ justify-content: center;
+
+  align-items: center;
+
+display: flex;
+flex-direction: column;
+  font-size: 1rem;
+  color:white;
+  font-family: "Montserrat",sans-serif;
+  background-color: #1a1a1a;
+
+}
+
+
+.r1mob{
+flex:1;
+place-content: center;
+font-size: 1.2rem;
+line-height:1.7rem;
+display: flex;
+flex-direction: column;
+background-color:#0e0e0e;
+text-align: left;
+padding-left: 1rem;
+}
+
+.r1mob a{
+text-decoration: none;
+cursor: pointer;
+color: white;
+}
+.r1mob a:hover{
+  transform: scale(1.1);
+  color:#ffd700;
+  transition: transform 0.3sec ease,color 0.3sec ease;
+}
+
 @media(max-width:1025px){
   .reach{
   max-height: 150px;
