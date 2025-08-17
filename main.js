@@ -22,7 +22,7 @@ document.addEventListener("click", function (e) {
 const resumeButton = document.querySelector(".resume");
 if (resumeButton) {
   resumeButton.addEventListener("click", function () {
-    window.open("assets/documents/akshay_resume.pdf", "_blank");
+    window.open("assets/documents/resume.pdf", "_blank");
   });
 }
 
