@@ -89,16 +89,16 @@ const projectData = {
       description:"This is my personal portfolio showcasing my skills, projects, and credentials as a developer. It’s designed to be clean, responsive, and easy to navigate, highlighting my work across personal, client, and collaborative projects. Visitors can explore my certifications, see interactive previews of my work, and connect with me for potential collaborations or opportunities. The site adapts to all screen sizes, ensuring a smooth browsing experience whether on desktop or mobile.",
       image: "assets/images/project/project1/p1p1.png",
       tech: ["HTML", "CSS", "JavaScript"],
-      link: "#",
-      github:"#"
+      link: "https://arcaneoverlord.github.io/akshay-portfolio/",
+      github:"https://github.com/ArcaneOverlord/akshay-portfolio"
     },
      {
       title: "A jobfair website concept",
       description: "A work in progress website featuring forms and live preview ",
       image: "assets/images/project/project2/p2p1.png",
       tech: ["HTML", "CSS", "JavaScript"],
-      link: "#",
-      github:"#"
+      link: " https://arcaneoverlord.github.io/Job-fair-2025-project-1/",
+      github:"https://github.com/ArcaneOverlord/Job-fair-2025-project-1"
     },
      
     // more personal projects...
