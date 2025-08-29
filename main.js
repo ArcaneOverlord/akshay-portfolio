@@ -96,9 +96,9 @@ const projectData = {
       title: "A jobfair website concept",
       description: "A work in progress website featuring forms and live preview ",
       image: "assets/images/project/project2/p2p1.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: " https://arcaneoverlord.github.io/Job-fair-2025-project-1/",
-      github:"https://github.com/ArcaneOverlord/Job-fair-2025-project-1"
+      tech: ["React,Tailwind CSS"],
+      link: " https://job-fair-remastered.vercel.app/",
+      github:"https://github.com/ArcaneOverlord/Job-fair-remastered-"
     },
      
     // more personal projects...
