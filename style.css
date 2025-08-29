@@ -17,6 +17,7 @@
       touch-action: manipulation;
       position: relative;
       box-sizing: border-box;
+      caret-color: transparent;
       
 
   -webkit-user-drag: none;
@@ -588,7 +589,7 @@ min-width: 0;
 @media(max-width:650px){
     .projectCard {
     
-    max-width:400px; /* Full width on mobile */
+    max-width:430px; /* Full width on mobile */
     
   }
 }
