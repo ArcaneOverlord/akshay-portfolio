@@ -94,7 +94,7 @@ const projectData = {
     },
      {
       title: "A jobfair website concept",
-      description: "A work in progress website featuring forms and live preview ",
+      description: "The Job Fair Concept Website is a modern, interactive platform designed to streamline the recruitment and application process for students and fresh graduates. Built using React and Tailwind CSS, the site offers a clean, user-friendly interface with seamless navigation and responsive design across devices. ",
       image: "assets/images/project/project2/p2p1.png",
       tech: ["React,Tailwind CSS"],
       link: " https://job-fair-remastered.vercel.app/",
